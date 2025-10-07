@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Actividad3 {
     public static void main(String[] args) {
-        //Introdue la nota
+        //Para introducir la nota
         Scanner teclado=new Scanner(System.in);
         System.out.println("Introduce la nota: ");
         int nota=teclado.nextInt();

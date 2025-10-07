@@ -1,4 +1,3 @@
-
 public class PracticaDias {
     public static void main(String[] args) {
         // Practica: Solo ejecuta el switch si el número es entero
