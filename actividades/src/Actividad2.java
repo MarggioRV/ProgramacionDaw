@@ -1,3 +1,6 @@
+//Pag 14, activ 
+/*  Actividad: Haz un programa que nos pide una nota y nos indica la calificación
+(sobresaliente, notable, bien, aprobado, suspenso, nota incorrecta). Usa if-else y switch */
 
 import java.util.Scanner;
 

@@ -1,42 +1,10 @@
+//Pag 22, Actv 1.
 
-import java.util.Scanner;
+/* Calcular el máximo de 3 números si existe la función maximo(a,b).
+Después aplica ambas para el caso de máximo de 5 números. Ten en cuenta que
+una función se puede utilizar en una expresión Ej: int a= 5+maximo(3,7); o int
+b=maximo(maximo(2,3),4); */
 
-public class Actividad6{
-    public static void main(String[] args) {
-        int opcion;
-        int numero1,numero2;
-        boolean salida=false;
-        Scanner teclado = new Scanner(System.in);
-        do {
-            System.out.println("**** CALCULADORA DAW ****");
-            System.out.println("1- Sumar");
-            System.out.println("2- Restar");
-            System.out.println("3- Multiplicar");
-            System.out.println("Introduce una opción o -1 para salir: ");
-            opcion=teclado.nextInt();
-            switch(opcion){
-
-                case 1: System.out.println("Introduzca los números: ");
-                        numero1=teclado.nextInt();
-                        numero2=teclado.nextInt();
-                        System.out.println("La suma es: "+(numero1+numero2));
-                        break;
-                case 2: System.out.println("Introduzca los números: ");
-                        numero1=teclado.nextInt();
-                        numero2=teclado.nextInt();
-                        System.out.println("La suma es: "+(numero1-numero2));
-                        break;
-                case 3: System.out.println("Introduzca los números: ");
-                        numero1=teclado.nextInt();
-                        numero2=teclado.nextInt();
-                        System.out.println("La suma es: "+(numero1*numero2));
-                        break;
-                        
-                default: //Caso -1
-                        salida=true;
-                        System.out.println("Adiooooos...");
-                        break;
-            }
-        } while (opcion!=-1);
-    }
+public class Actividad6 {
+    
 }

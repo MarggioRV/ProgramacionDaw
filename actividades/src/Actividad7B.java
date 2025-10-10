@@ -1,23 +1,35 @@
 import java.util.Scanner;
 
 public class Actividad7B {
-    public static void main(String[] args) {
-    // Leer los valores de a y b
-        System.out.println("Introduce los N*: "); /* Println crea un salto de linea */
-        Scanner teclado = new Scanner(System.in);
-        int a = teclado.nextInt();
-        int b = teclado.nextInt();
+//Pag 24, Actividad 2: 
 
-    // Calc el V.Absoluto
-        a = Math.abs(a); //Importante pues el MCM siempre es positivo
-        b = Math.abs(b);
+/* Crear las funciones esPar, esDivisible3 y un
+procedimiento para imprimir los números pares divisibles por 3 que
+hay entre 1 y 20 */
 
-        int mayor = Math.max(a, b); 
-        int mcm = mayor; //Mayor de los dos N*
+/*
+*Pseudocódigo
+*inicio_programa
+*Generar numero1 aleatorio
+*Generar numero2 aleatorio
+*Hacer cuentas (cociente, media, potencia, raiz cuadrada)
+* Imprimir cociente, media, potencia y raiz de cada número
+*fin_programa
+*/
 
-    // MCM
-        while ((mcm % a != 0) || (mcm % b != 0)) { mcm += mayor;}
+public static void main(String[] args) {ParesDivi3();}
 
-    System.out.println("El RPTA es: " + mcm);
+public static boolean esPar(int numero1) {
+return numero1 % 2 == 0;}
+
+public static boolean esDivisible3(int numero1) {
+return numero1 % 3 == 0;}
+
+public static void ParesDivi3() {
+        System.out.println("Números entre 1 y 20, que son pares y divisibles por 3:");
+        for (int i=1; i <= 20; i++)
+        {
+            if (esPar(i) && esDivisible3(i)) {System.out.println(i);}
+        } 
     }
 }

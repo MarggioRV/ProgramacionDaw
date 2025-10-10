@@ -1,52 +1,34 @@
-
 import java.util.Scanner;
 
+//Adivina el número, pag 17, actv 5
 public class Actividad4 {
-//Pag 14, Actvs 2
     public static void main(String[] args) {
-        //Definir variables
-        int dia=0, mes=0, anyo=0;
-        System.out.println("Introduce día mes año: ");
+        //Generar el número aleatorio
+        int aleatorio=(int)(Math.random()*(100-1+1))+1;
+        int intentos=0;
+        int numero=0;
+        boolean encontrado=false;
         Scanner teclado = new Scanner(System.in);
-        dia=teclado.nextInt();
-        mes=teclado.nextInt();
-        anyo=teclado.nextInt();
 
-        if(mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12){//Meses de 31 días
-            if(dia>=1 && dia<=31){
-                System.out.println("Fecha correcta");
+        //Crearemos el bucle para ir viendo lo que el usuario va introduciendo
+        do { 
+            //Vamos a leer el número
+            System.out.print("Introduce un número: ");
+            numero=teclado.nextInt();
+            if(numero>aleatorio){
+                System.out.println("El número es menor al que has introducido");
+            }
+            else if(numero<aleatorio){
+                System.out.println("El número es mayor al que has introducido");
             }
             else{
-                System.out.println("Fecha incorrecta");
+                System.out.println("Has acertado con el número");
+                encontrado=true;
             }
-        }
-        else if(mes==4 || mes==6 || mes==9 || mes==11){//MEses de 30 días
-            if(dia>=1 && dia<=30){
-                System.out.println("Fecha correcta");
-            }
-            else{
-                System.out.println("Fecha incorrecta");
-            }
-        }
-        else if(mes==2){//Caso febrero
-            if(dia>=1 && dia<=28){
-                System.out.println("Fecha correcta");
-            }
-            else if(dia==29){
-                if((anyo%4==0 && anyo%100!=0)||(anyo%400==0)){//Ver si el año es bisiesto
-                    System.out.println("Fecha correcta");
-                }
-                else{
-                    System.out.println("Fecha incorrecta");
-                }
-            }
-            else{
-                System.out.println("Fecha incorrecta");
-            }
-        }
-        else{
-            System.out.println("Fecha incorrecta");
-        }
-
+            intentos++;
+           
+        } while (!encontrado);
+        System.out.println("Has utilizado "+intentos+" para acertar.");
     }
 }
+

@@ -58,3 +58,4 @@ public class App {
         boolean logico=false;//Variable local
     }
 }
+

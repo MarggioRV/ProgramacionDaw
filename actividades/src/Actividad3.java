@@ -1,68 +1,40 @@
 
 import java.util.Scanner;
-
 public class Actividad3 {
+//Pag 16, Actvs 3, y 4 (Evolución)
     public static void main(String[] args) {
-        //Para introducir la nota
-        Scanner teclado=new Scanner(System.in);
-        System.out.println("Introduce la nota: ");
-        int nota=teclado.nextInt();
-
-        //  if (nota < 0 || nota > 10) {
-        //     System.out.println("Nota Incorrecta");} 
-            
-        // else if (nota < 5) {
-        //     System.out.println("SUSPENSO");} 
-
-        // else if (nota == 5) {
-        //     System.out.println("SUFICIENTE");} 
-        
-        // else if (nota == 6) {
-        //     System.out.println("BIEN");} 
-            
-        // else if (nota == 7) {
-        //     System.out.println("Muy bien");}
-
-        // else if (nota == 8) {
-        //     System.out.println("NOTABLE");}
-        
-        // else if (nota == 9) {
-        //     System.out.println("SOBRESALIENTE");}
-            
-        // else if (nota == 10) {
-        //     System.out.println("EXCELENTE");} /* Según parece esto teclado.close(); es bueno cerrar el Scanner*/
-
-         // Tambien, versión Corregida-Profesor*/
-
-        if(nota>=0 && nota <5){
-            System.out.println("SUSPENSO");
-        }
-        else if (nota>=5 && nota<7){
-            System.out.println("APROBADO");
-        }
-        else if(nota>=7 && nota <9){
-            System.out.println("NOTABLE");
-        }
-        else if(nota>=9 && nota <=10){
-            System.out.println("SOBRESALIENTE");
-        }
-        else{
-            System.out.println("Nota incorrecta");
-        }
-
-        switch(nota){
-            case 0:
-            case 1:
-            case 2:
-            case 3:
-            case 4: System.out.println("SUSPENSO");break;
-            case 5:
-            case 6: System.out.println("APROBADO");break;
-            case 7:
-            case 8: System.out.println("NOTABLE");break;
-            case 9:
-            case 10: System.out.println("SOBRESALIENTE");break;
-            default:System.out.println("Nota incorrecta");break;
-        }
-    }   
+        //Leer edades, hasta que se escriba -1
+        // y entonces sacar el valor máximo y mínimo
+        int maximo=-1;
+        int minimo=1000000;
+        int contadorPersona=0;
+        int suma=0;
+        int mayor18=0;
+        Scanner teclado = new Scanner(System.in);
+        int edad;
+        do { 
+            System.out.print("Introduce una edad o -1 para salir: ");
+            edad=teclado.nextInt();
+            if(edad!=-1) contadorPersona++;//Nueva persona
+            //Establezco la lógica para máximo y mínimo
+            if(edad>maximo){ 
+                maximo=edad;
+            }
+            if(edad<minimo && edad!=-1){
+                minimo=edad;
+            }
+            if(edad>=18){
+                mayor18++;
+            }
+            if(edad!=-1){
+                suma+=edad; //suma=suma+edad;
+            }
+        } while (edad!=-1);
+        System.out.println("El número de personas: "+contadorPersona);
+        System.out.println("El máximo es: "+maximo);
+        System.out.println("El mínimo es: "+minimo);
+        System.out.println("El número de mayores de 18: "+mayor18);
+        System.out.println("Suma de edades: "+suma);
+        System.out.println("Media de edades: "+(suma/contadorPersona));
+    }
 }
