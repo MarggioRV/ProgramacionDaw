@@ -52,6 +52,11 @@ public class ActividadRecursividad {
         if(exponente==0) return 1;
         else return base*potencia(base,exponente-1);
     }
+   
+/*  Método recursivo para pasar un número decimal, que
+    compruebe que es positivo, y pasarlo a binario mediante
+    sucesivas divisiones por 2 */
+
     public static String pasarBinario(int num) {
     if (num == 0) {
         return "";

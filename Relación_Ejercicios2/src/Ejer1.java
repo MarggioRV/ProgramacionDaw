@@ -12,12 +12,12 @@ public class Ejer1 {
     System.out.println("El tiempo es: " + ahora);
 
     // Objetos tiempo, de LocalTime
-    LocalDateTime MñInicio = LocalDateTime.of(2025, 10, 7, 6, 0, 0);
-    LocalDateTime MñFin = LocalDateTime.of(2025, 10, 7,12, 0);
-    LocalDateTime TdInicio = LocalDateTime.of(2025, 10, 7,13, 0);
-    LocalDateTime TdFin = LocalDateTime.of(2025, 10, 7,20, 0);
-    LocalDateTime NhInicio = LocalDateTime.of(2025, 10, 7,21, 0);
-    LocalDateTime NhFin = LocalDateTime.of(2025, 10, 7,5, 59);
+    LocalDateTime MñInicio = LocalDateTime.of(2025, 10, 10, 6, 0, 0);
+    LocalDateTime MñFin = LocalDateTime.of(2025, 10, 10,12, 0);
+    LocalDateTime TdInicio = LocalDateTime.of(2025, 10, 10,13, 0);
+    LocalDateTime TdFin = LocalDateTime.of(2025, 10, 10,20, 0);
+    LocalDateTime NhInicio = LocalDateTime.of(2025, 10, 10,21, 0);
+    LocalDateTime NhFin = LocalDateTime.of(2025, 10, 10,5, 59);
 
    // consicionales if entre horas
    // Logica: 
