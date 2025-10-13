@@ -1,6 +1,7 @@
 public class PracticaDias {
     public static void main(String[] args) {
         // Practica: Solo ejecuta el switch si el número es entero
+        
         int dias = 1; /*Por definición, Int solo acepta N*Enteros*/
 
         // Condicional x
@@ -16,8 +17,8 @@ public class PracticaDias {
         /*Condicional para N*Enteros
         if (dias % 1 == 0)*/
     
-        /*Aquí, sin break, el switch ejecuta hacia abajo desde el primero que coincida. 
-        Eso es fall-through, pero el switch moderno (Con ->), se puede evitar */
+        /*El switch ejecuta hacia abajo desde el primero que coincida. 
+        El error, referido, es fall-through (SinBreak) pero con el switch moderno (Con ->), se puede evitar */
 
         {
             switch (dias) 

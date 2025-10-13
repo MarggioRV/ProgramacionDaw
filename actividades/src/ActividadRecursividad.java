@@ -1,13 +1,18 @@
 public class ActividadRecursividad {
+
+/* Función que devuelve la cantidad de dígitos de un número positivo */
+     
+    /*  Modo Iterativo */
     public static int numeroDigitos(int n){
         int contador=0;
         while(n>0){
-            n=n/10;
+            n=n/10; //Debido a que los números estan en base 10
             contador++;
         }
         return contador;
     }
 
+    /* Modo Recursivo*/
     public static int numeroDigitosRecursivo(int n){
         if(n>=0 && n<10){ //Caso base
             return 1;
@@ -16,6 +21,11 @@ public class ActividadRecursividad {
             return 1+numeroDigitosRecursivo(n/10);
         }
     }
+
+/* Función que devuelve la suma de los números naturales desde 1 hasta N. 
+   Compara el código con el que se obtendría iterativo.*/
+
+    /*  Modo Iterativo */
     public static int sumaNumeros(int n){
         int suma=0;
         for(int i=1;i<=n;i++){
@@ -23,6 +33,8 @@ public class ActividadRecursividad {
         }
         return suma;
     }
+    
+    /* Modo Recursivo*/
     public static int sumaNumerosRecursivo(int n){
         if(n==1){
             return 1;
@@ -47,6 +59,10 @@ public class ActividadRecursividad {
            Hanoi(n-1, auxiliar, origen, destino);
         }
     }
+
+/* Función que calcula ab usando recursividad. Recordad que 
+   aPotenciaB=a*aPotenciaB-1 */
+
     public static double potencia(int base, int exponente){
         //Caso base
         if(exponente==0) return 1;
@@ -64,8 +80,10 @@ public class ActividadRecursividad {
         return pasarBinario(num / 2) + (num % 2);
     }
 }
+
+//Llaves de "Invocación"
     public static void main(String[] args) {
-        int numero=234;
+        int numero=234; //Aplica a ambos métodos de numeroDigitos
         // System.out.println(numeroDigitos(numero));
         // System.out.println(numeroDigitosRecursivo(numero));
         // System.out.println(sumaNumeros(4));
