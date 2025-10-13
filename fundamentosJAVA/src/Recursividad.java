@@ -1,4 +1,3 @@
-package fundamentosJAVA;
 
 public class Recursividad {
     public static int factorial(int n){

@@ -1,4 +1,3 @@
-package lb;
 
 public class FuncionesJava {
 
@@ -40,7 +39,7 @@ public class FuncionesJava {
             */
             escribir3Saludos();
 
-            //Operación    /* No puedes darle void a un println */
+            //Operación    /* No puedes exigir más un void con println */
             System.out.println(suma(3,5)); //Suma con parametros enteros
             System.out.println(suma(1.5,3.7)); //Suma con parametros reales
             

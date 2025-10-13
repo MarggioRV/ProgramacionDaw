@@ -83,7 +83,7 @@ public class ActividadRecursividad {
 
 //Llaves de "Invocación"
     public static void main(String[] args) {
-        int numero=234; //Aplica a ambos métodos de numeroDigitos
+        int numero=234; //Esto aplica a ambos métodos de numeroDigitos
         // System.out.println(numeroDigitos(numero));
         // System.out.println(numeroDigitosRecursivo(numero));
         // System.out.println(sumaNumeros(4));

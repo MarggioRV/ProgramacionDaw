@@ -1,52 +1,71 @@
 
 import java.util.Scanner;
 
-public class Actividad2B {
-//Pag 14, Actvs 2
-    public static void main(String[] args) {
-        //Definir variables
-        int dia=0, mes=0, anyo=0;
-        System.out.println("Introduce día mes año: ");
-        Scanner teclado = new Scanner(System.in);
-        dia=teclado.nextInt();
-        mes=teclado.nextInt();
-        anyo=teclado.nextInt();
+/* Pag 14, Actv 2: Haz un programa que nos pide una nota y nos indica la calificación
+(sobresaliente, notable, bien, aprobado, suspenso, nota incorrecta). Usa if-else y switch */
 
-        if(mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12){//Meses de 31 días
-            if(dia>=1 && dia<=31){
-                System.out.println("Fecha correcta");
-            }
-            else{
-                System.out.println("Fecha incorrecta");
-            }
+public class Actividad2B {
+    public static void main(String[] args) {
+        //Para introducir la nota
+        Scanner teclado=new Scanner(System.in);
+        System.out.println("Introduce la nota: ");
+        int nota=teclado.nextInt();
+
+        //  if (nota < 0 || nota > 10) {
+        //     System.out.println("Nota Incorrecta");} 
+            
+        // else if (nota < 5) {
+        //     System.out.println("SUSPENSO");} 
+
+        // else if (nota == 5) {
+        //     System.out.println("SUFICIENTE");} 
+        
+        // else if (nota == 6) {
+        //     System.out.println("BIEN");} 
+            
+        // else if (nota == 7) {
+        //     System.out.println("Muy bien");}
+
+        // else if (nota == 8) {
+        //     System.out.println("NOTABLE");}
+        
+        // else if (nota == 9) {
+        //     System.out.println("SOBRESALIENTE");}
+            
+        // else if (nota == 10) {
+        //     System.out.println("EXCELENTE");} /* Según parece esto teclado.close(); es bueno cerrar el Scanner*/
+
+        /* Tambien, versión Corregida_Profesor */
+
+        if(nota>=0 && nota <5){
+            System.out.println("SUSPENSO");
         }
-        else if(mes==4 || mes==6 || mes==9 || mes==11){//MEses de 30 días
-            if(dia>=1 && dia<=30){
-                System.out.println("Fecha correcta");
-            }
-            else{
-                System.out.println("Fecha incorrecta");
-            }
+        else if (nota>=5 && nota<7){
+            System.out.println("APROBADO");
         }
-        else if(mes==2){//Caso febrero
-            if(dia>=1 && dia<=28){
-                System.out.println("Fecha correcta");
-            }
-            else if(dia==29){
-                if((anyo%4==0 && anyo%100!=0)||(anyo%400==0)){//Ver si el año es bisiesto
-                    System.out.println("Fecha correcta");
-                }
-                else{
-                    System.out.println("Fecha incorrecta");
-                }
-            }
-            else{
-                System.out.println("Fecha incorrecta");
-            }
+        else if(nota>=7 && nota <9){
+            System.out.println("NOTABLE");
+        }
+        else if(nota>=9 && nota <=10){
+            System.out.println("SOBRESALIENTE");
         }
         else{
-            System.out.println("Fecha incorrecta");
+            System.out.println("Nota incorrecta");
         }
 
-    }
+        switch(nota){
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4: System.out.println("SUSPENSO");break;
+            case 5:
+            case 6: System.out.println("APROBADO");break;
+            case 7:
+            case 8: System.out.println("NOTABLE");break;
+            case 9:
+            case 10: System.out.println("SOBRESALIENTE");break;
+            default:System.out.println("Nota incorrecta");break;
+        }
+    }   
 }
