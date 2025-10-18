@@ -1,5 +1,4 @@
 import java.time.*; // Este paquete contiene LocalDate, LocalTime y LocalDateTime.
-import java.time.format.*;  // Este paquete contiene DateTimeFormatter
 
 /* 1. Escribe un programa que imprima buenos días, buenas tardes y buenas noches 
 según la hora actual. Se utilizarán los tramos de 6 a 12, de 13 a 20 y de 21 a 5. 
