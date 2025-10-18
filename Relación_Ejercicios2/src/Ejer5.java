@@ -19,7 +19,6 @@ y con 7 se cerrará el programa. */
         
         Scanner teclado = new Scanner(System.in);
         int opcion = 0;
-        boolean valido;
 
         do {
             System.out.println("Elige el #Día para ver el horario (1-5), o 7 para salir ");
