@@ -24,6 +24,7 @@ public class Ejer4 {
         //Calcular la x̅
         double media = (nota1 + nota2) / 2.0;
 
+        //1era Divergencia
         if (media >= 5) {
             System.out.println("Alumno aprobado. Su Media es: " + media);
         }
@@ -33,7 +34,8 @@ public class Ejer4 {
         //Leer Parametros 2
         teclado.nextLine();  //Para que lea la linea entera
         String resultado = teclado.nextLine();
-
+        
+        //2era Divergencia
             if (resultado.equals("Apto")) { //Falla con variaciones, alternativa: equalsIgnoreCase
                 System.out.println("Entoces, tu no final es 5");
             }

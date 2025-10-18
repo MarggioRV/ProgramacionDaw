@@ -20,7 +20,7 @@ public class Ejer2 {
         System.out.println("Esc las horas hechas: ");
         int num1 = teclado.nextInt();
 
-         if (num1 <= 40) { /* Condicionales para cada formula  */
+        if (num1 <= 40) { /* Condicionales para cada formula  */
             int resultado1; /* Se debe declarar otra nueva variable */
             resultado1 = Formula1(num1);
             System.out.println("El sueldo semanal que le corresponde es de: " + resultado1 + " euros"); 
