@@ -1,28 +1,28 @@
 import java.util.Scanner;
 
 public class Ejer4B {
-    
+    /* 4B. Variación con do while */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-    // Valido = True
+    //Valido = True
         boolean valido;
 
-    // Leer nota1
+    //Leer nota1
         double nota1 = 0;
 
         do {
             System.out.println("Esc la nota1: ");
-            valido = teclado.hasNextDouble();
+            valido = teclado.hasNextDouble(); /* Esto checkea si la entrada es un #decimal válido */
                 if (valido) {
-                nota1 = teclado.nextDouble();
+                nota1 = teclado.nextDouble(); /* Entonces, de serlo, lo lee */
                 } else {
                 System.out.println("Entrada inválida. Esc un número válido:");
                 }
             teclado.nextLine(); 
             } while (!valido);
 
-    // Leer nota2
+    //Leer nota2
         double nota2 = 0;
 
         do {
