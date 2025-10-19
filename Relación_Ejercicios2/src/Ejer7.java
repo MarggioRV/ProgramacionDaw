@@ -26,7 +26,7 @@ public class Ejer7 {
 
         } while (num1!=0);
 
-        System.out.println("La cantidad de # Positvos es " + ContadorPvo + ", mientras de Negativos es " + ContadorNega);
+        System.out.println("La cantidad de # Positvos es " + ContadorPvo + ", mientras la de Negativos es " + ContadorNega);
         teclado.close();
     }
 }
