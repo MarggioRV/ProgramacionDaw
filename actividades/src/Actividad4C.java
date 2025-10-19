@@ -35,7 +35,6 @@ FinAlgoritmo*/
     System.out.println("El MCD es: " + a);
     }
 
-
 }
 
 

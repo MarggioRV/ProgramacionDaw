@@ -24,18 +24,17 @@ public class Actividad4B{
                 case 2: System.out.println("Introduzca los números: ");
                         numero1=teclado.nextInt();
                         numero2=teclado.nextInt();
-                        System.out.println("La suma es: "+(numero1-numero2));
+                        System.out.println("La resta es: "+(numero1-numero2));
                         break;
                 case 3: System.out.println("Introduzca los números: ");
                         numero1=teclado.nextInt();
                         numero2=teclado.nextInt();
-                        System.out.println("La suma es: "+(numero1*numero2));
+                        System.out.println("La multiplicación es: "+(numero1*numero2));
                         break;
                         
                 default: //Caso -1
                         salida=true;
                         System.out.println("Adiooooos...");
-                        break;
             }
         } while (opcion!=-1);
     }
