@@ -37,8 +37,8 @@ public class Ejer2 {
     return 12*num1;}
 
     public static int Formula2(int num1) { /* F' cuando sea '40 <' , mulp solo el resto */
-    return (40*12)+((num1-40)*16);
-}}
+    return (40*12)+((num1-40)*16);}
+}
 
 
 

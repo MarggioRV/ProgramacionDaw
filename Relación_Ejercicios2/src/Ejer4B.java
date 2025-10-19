@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ejer4B {
-    /* 4B. Variación con do while */
+    /* La 4ta, pero siendo una variación con do while */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
