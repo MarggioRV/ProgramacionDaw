@@ -61,7 +61,6 @@ y un 20% en caso de estar casado. */
         }
     
     //Invocando RPTAs
-
         //Bruto
         //System.out.println("Sueldo bruto          " + bruto(cargo, num2, estado));
         //Dietas
@@ -71,6 +70,7 @@ y un 20% en caso de estar casado. */
         //Neto
         //System.out.println("Su nomina es          " + neto(bruto(cargo, num2, estado),estado));
 
+    //Invocando RPTAs en Formato
         System.out.println("-----------------------------------------------|");
         System.out.println("| Sueldo Base                          " + cargo);
         System.out.println("| Dietas                               " + num2);
