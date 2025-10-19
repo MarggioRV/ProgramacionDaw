@@ -1,4 +1,5 @@
 import java.util.Scanner;
+/* Es el 8, pero recursico */
 
 public class Ejer9 {
 
