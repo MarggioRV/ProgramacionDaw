@@ -21,21 +21,26 @@ y con 7 se cerrará el programa. */
         int opcion = 0;
 
         do {
+
             System.out.println("Elige el #Día para ver el horario (1-5), o 7 para salir ");
             opcion = teclado.nextInt();
-            System.out.println();
-            System.out.println("···====···====···====···====···====···====···====···====···");
-            System.out.println();
-            System.out.println(  "      Hora       |    "+ dias[opcion - 1]); /* Solo con dias, no funciona */
-            System.out.println("----------------------------------");
-            System.out.println("  08:00-09:00    |  " + horario[opcion - 1][0]); /* Se empieza desde 0 */
-            System.out.println("  09:00-10:00    |  " + horario[opcion - 1][1]);
-            System.out.println("  10:00-11:00    |  " + horario[opcion - 1][2]);
-            System.out.println("==================================");
-            System.out.println("  08:00-09:00    |  " + horario[opcion - 1][3]);
-            System.out.println("  09:00-10:00    |  " + horario[opcion - 1][4]);
-            System.out.println("  10:00-11:00    |  " + horario[opcion - 1][5]);
-            System.out.println();
+
+            if (opcion != 7) {
+                System.out.println();
+                System.out.println("···====···====···====···====···====···====···====···====···");
+                System.out.println();
+                System.out.println(  "      Hora       |    "+ dias[opcion - 1]); /* Solo con dias, no funciona */
+                System.out.println("----------------------------------");
+                System.out.println("  08:00-09:00    |  " + horario[opcion - 1][0]); /* Se empieza desde 0 */
+                System.out.println("  09:00-10:00    |  " + horario[opcion - 1][1]);
+                System.out.println("  10:00-11:00    |  " + horario[opcion - 1][2]);
+                System.out.println("==================================");
+                System.out.println("  08:00-09:00    |  " + horario[opcion - 1][3]);
+                System.out.println("  09:00-10:00    |  " + horario[opcion - 1][4]);
+                System.out.println("  10:00-11:00    |  " + horario[opcion - 1][5]);
+                System.out.println(); 
+            }
+            
         } while (opcion != 7);
         
         teclado.close();
