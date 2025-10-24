@@ -23,7 +23,7 @@ y con 7 se cerrará el programa. */
 
         do {
             System.out.println("Elige el #Día para ver el horario (1-5), o 7 para salir ");
-            if (teclado.hasNextInt()) {
+            if (teclado.hasNextInt()) { /* Numero entero valido */
                 opcion = teclado.nextInt();
                 if ((opcion >= 1 && opcion <= 5) || opcion == 7) {
                     valido = true;
