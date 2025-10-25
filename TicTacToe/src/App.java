@@ -43,7 +43,7 @@ public class App {
         // else {System.out.println("El juagador2 ha ganado");}
         
     }
-    public static void imprimeMatriz(){
+    public static void imprimeMatriz(){ /* recordar!! */
         for(int i=0;i<matriz.length;i++){
             for(int j=0;j<matriz[i].length;j++){
                 System.out.print(matriz[i][j]+" ");

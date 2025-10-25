@@ -7,46 +7,44 @@ public class App2 {
         static boolean turno=true;
         final static int JUEGO1=1;
         final static int JUEGO2=2;
+        static boolean Sivale=true;
     public static void main(String[] args) throws Exception {
         Scanner teclado=new Scanner(System.in);
         int posicion;
         //Mostrar situación inicial
         imprimeMatriz();
 
-        // for(int i=0;i<9;i++){
+        for(int i=0;i<9;i++){
+            do{
+                do{
+                    System.out.print("Introduce coordenada del 1 al 9: ");
+                    posicion=teclado.nextInt();
+                }while(posicion<0 || posicion>9);
+            }while(!valida(posicion));
+            jugada(turno,posicion);
+            if(comprobarGanador(turno)){
+                if(turno==true) System.out.println("El juagador1 ha ganado");
+                else {System.out.println("El juagador2 ha ganado");}
+                break;
+            }
+            imprimeMatriz();
+            turno=!turno;
+        }
+        if(!comprobarGanador(turno) && !comprobarGanador(!turno))//Si llegas aquí comprobamos si no ha ganado nadie
+            System.out.println("Hay un empate");
+
+        // do{
         //     System.out.print("Introduce coordenada del 1 al 9: ");
         //     posicion=teclado.nextInt();
         //     jugada(turno,posicion);
-        //     if(comprobarGanador(turno)){
-        //         if(turno==true) System.out.println("El juagador1 ha ganado");
-        //         else {System.out.println("El juagador2 ha ganado");}
-        //         break;
-        //     }
         //     imprimeMatriz();
         //     turno=!turno;
-        // }
-         for(int i=0; i<9;i++){
-        do{
-            do {
-                System.out.print(teclado);
-                posicion=teclado.nextInt();
-            
-            System.out.print("Introduce coordenada del 1 al 9: ");
-            posicion=teclado.nextInt();
-            } while (turno);
-
-            jugada(turno,posicion);
-            imprimeMatriz();
-            turno=!turno;
-        }while(!comprobarGanador(turno));
-        if(turno==true) System.out.println("El juagador1 ha ganado");
-        else {System.out.println("El juagador2 ha ganado");}
-        break;
-        }  
+        // }while(!comprobarGanador(!turno));
+        // if(turno==true) System.out.println("El juagador1 ha ganado");
+        // else {System.out.println("El juagador2 ha ganado");}
         
     }
-
-    public static void imprimeMatriz(){
+    public static void imprimeMatriz(){ /* recordar!! */
         for(int i=0;i<matriz.length;i++){
             for(int j=0;j<matriz[i].length;j++){
                 System.out.print(matriz[i][j]+" ");
@@ -55,11 +53,41 @@ public class App2 {
         }
     }
     
-
+    public static boolean valida(int posicion){
+        boolean control=true;
+        switch(posicion){
+            case 1: 
+                if (matriz[0][0]!=0) control=false;
+                break;
+            case 2: 
+                if(matriz[0][1]!=0) control=false;
+                break;
+            case 3: 
+                if(matriz[0][2]!=0) control=false;
+                break;
+            case 4: 
+                if (matriz[1][0]!=0) control=false;
+                break;
+            case 5: 
+                if (matriz[1][1]!=0) control=false;
+                break;
+            case 6: 
+                if (matriz[1][2]!=0) control=false;
+                break;
+            case 7: 
+                if(matriz[2][0]!=0) control=false;
+                break;
+            case 8: 
+                if (matriz[02][1]!=0) control=false;
+                break;
+            case 9: 
+                if (matriz[2][2]!=0) control=false;
+                break;
+        }
+        return control;
+    }
     public static void jugada(boolean turno,int posicion){
         int valor;
-        boolean control=true;
-
         if (turno==true) valor=JUEGO1;
         else{ valor=JUEGO2;}
         switch(posicion){
