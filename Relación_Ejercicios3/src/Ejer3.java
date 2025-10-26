@@ -1,23 +1,25 @@
+/* 3. Escribir una función que devuelve un array que contiene el valor máximo y mínimo del 
+array introducido como parámetro.*/
+
 import java.util.Scanner;
 
-public class Ejer2 {
+public class Ejer3 {
     public static void main(String[] args) {
         //Crear el vector dinamico
         int[] vector=null;
-        //inserta un valor
-        vector=push(vector,3);
-        vector=push(vector,5);
-        
+
         Scanner teclado=new Scanner(System.in);
-        System.out.println("Introduce #s o esc 0 para concluir ");
-            do {
-                vector=push(vector,teclado.nextInt());
-            } while (vector[vector.length-1]!=-0);
+        System.out.println("Introduce 7 números para odenar:");
+
+        for (int i = 0; i < 7; i++) {
+        vector = push(vector, teclado.nextInt());
+        }
         
         //Sin Ordenar
+        System.out.println();
         System.out.println("Vector sin ordenar: ");
             for(int i=0;i<vector.length;i++){
-            System.out.print(vector[i]+" "); //Automatiza la impresión
+            System.out.print(vector[i]+" "); // Automatiza la impresión
         }
 
         //Ordenamiento_Burbuja
@@ -30,11 +32,17 @@ public class Ejer2 {
                 }    
             }
         }
+        System.out.println();
         System.out.println("\nVector ordenado: ");
             
         for(int i=0;i<vector.length;i++){
         System.out.print(vector[i]+" ");
         } 
+        
+        //Numero Mayor y Menor
+        System.out.println();
+        System.out.println("\nEl máximo es: "+ vector[0]);
+        System.out.println("El minimo es: "+ vector[6]);
         teclado.close();
     }
      
@@ -53,4 +61,3 @@ public class Ejer2 {
         return salida;
     }
 }
-
