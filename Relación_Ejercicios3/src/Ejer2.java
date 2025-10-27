@@ -4,7 +4,7 @@ public class Ejer2 {
     public static void main(String[] args) {
         //Crear el vector dinamico
         int[] vector=null;
-        //inserta un valor
+        //Insertar un valor
         vector=push(vector,3);
         vector=push(vector,5);
         

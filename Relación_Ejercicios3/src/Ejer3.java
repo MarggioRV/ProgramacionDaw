@@ -41,8 +41,8 @@ public class Ejer3 {
         
         //Numero Mayor y Menor
         System.out.println();
-        System.out.println("\nEl máximo es: "+ vector[0]);
-        System.out.println("El minimo es: "+ vector[6]);
+        System.out.println("\nEl máximo es: "+ vector[6]);
+        System.out.println("El minimo es: "+ vector[0]);
         teclado.close();
     }
      
