@@ -30,7 +30,7 @@ public class Ejer4 {
             System.out.println();
             System.out.println("\n¡Gamaste!");
         }else{
-            System.out.println("\nAcertaste #s: " + ContarNRepetidos(vector, LOTERIA));
+            System.out.println("\nAcertaste: " + ContarNRepetidos(vector, LOTERIA) + " número(s)");
         } 
         teclado.close();
     }
