@@ -9,13 +9,13 @@ public class Ejer4 {
         //Crear el vector dinamico
         int[] vector=null;
         //Loteria
-        int[] LOTERIA={10,20,30,40,50,60,70};
+        int[] LOTERIA={10,20,30,40,50,60};
         
         //Insertar un Valores
         Scanner teclado=new Scanner(System.in);
-        System.out.println("Introduce #s o esc 0 para concluir ");
+        System.out.println("Introduce tus #s de la suerte: ");
 
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 6; i++) {
         vector = push(vector, teclado.nextInt());
         }
         
@@ -23,15 +23,21 @@ public class Ejer4 {
         System.out.println("Tus números son: ");
             for(int i=0;i<vector.length;i++){
             System.out.print(vector[i]+" "); //Automatiza la impresión
-            
         }
         
+        //Comprobación Inicial
         if(Arrays.equals(LOTERIA, vector)){ 
             System.out.println();
-            System.out.println("\n¡Gamaste!");
+            System.out.println("\n¡Gamaste! Acertaste todos los #s");
+        //Aplicación del conteo
+        } else if (ContarNRepetidos(vector, LOTERIA) == 6) {
+            System.out.println();
+            System.out.println("\n¡Ganaste! Aunque los #s no estan orden correcto...");
         }else{
+            System.out.println();
             System.out.println("\nAcertaste: " + ContarNRepetidos(vector, LOTERIA) + " número(s)");
         } 
+
         teclado.close();
     }
      
