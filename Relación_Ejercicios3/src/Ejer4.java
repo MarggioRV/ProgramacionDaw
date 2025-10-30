@@ -26,7 +26,7 @@ public class Ejer4 {
         }
         
         //Comprobación Inicial
-        if(Arrays.equals(LOTERIA, vector)){ 
+        if(Arrays.equals(LOTERIA, vector)){ /* Comparación Liral */
             System.out.println();
             System.out.println("\n¡Gamaste! Acertaste todos los #s");
         //Aplicación del conteo
