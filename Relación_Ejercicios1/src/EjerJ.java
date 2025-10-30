@@ -43,6 +43,13 @@ public class EjerJ {
             return;
         }  
         
+        else if (N >= 20000) {
+            BV = BV + 1;
+            C = C - 20000;
+            System.out.println("C= " + C);
+            return;
+        } 
+
         else if (N >= 10000) {
             BD = BD + 1;
             C = C - 10000;
@@ -52,13 +59,20 @@ public class EjerJ {
 
         else if (N >= 5000) {
             BC2 = BC2 + 1;
-            C = C - 50000;
+            C = C - 5000;
+            System.out.println("C= " + C);
+            return;
+        } 
+
+        else if (N >= 1000) {
+            BM = BM + 1;
+            C = C - 1000;
             System.out.println("C= " + C);
             return;
         } 
 
         else {
-            BM++;
+            BM++; /* Lo que queda, por conatador */
             resto = C;
             System.out.println("Resto = " + resto);
         }
