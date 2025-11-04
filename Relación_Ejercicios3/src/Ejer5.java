@@ -1,10 +1,9 @@
-/* 4. Escribir un programa que valide el décimo de la bonoloto. Tendrás un array con los valores 
-correctos y otro el que introduzca el usuario. El programa verificará cuántos aciertos ha tenido. */
+/* El 4, pero con ArrayList<Integer> */
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Ejer4 {
+public class Ejer5 {
     public static void main(String[] args) {
         //Crear el vector dinamico
         int[] vector=null;
@@ -20,7 +19,7 @@ public class Ejer4 {
         vector = push(vector, teclado.nextInt());
         }
         
-        //Sin Ordenar
+        //Sin Ordenar 
         System.out.println("Tus números son: ");
             for(int i=0;i<vector.length;i++){
             System.out.print(vector[i]+" "); //Automatiza la impresión
@@ -74,5 +73,4 @@ public class Ejer4 {
     }
 
 }
-
 
