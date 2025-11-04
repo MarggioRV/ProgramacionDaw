@@ -73,7 +73,7 @@ public class ActivY {
     
     //Conversión
     public static void secretoCod(String palabras) {
-    //Se va construyendo una cadena de asteriscos con la misma longitud que la palabra
+    //Se va construyendo una cadena de asteriscos con la misma longitud que la palabra.
         StringBuilder simbolo = new StringBuilder(); /* Clase que permite crear y modificar cadenas de texto*/
         for (int i = 0; i < palabras.length(); i++) { 
             simbolo.append("*"); /* Metodo de la clase anterior, añade un valor a una secuencia */
