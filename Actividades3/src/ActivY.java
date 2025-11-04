@@ -38,10 +38,11 @@ public class ActivY {
         System.out.println();
 
         secretoCod(secreta);
-    
-        teclado.nextLine(); //limpiador_buffer
         
         System.out.println("\nEscb la posibles letras de la palabra");
+        dividirPalab1(secreta);
+        dividirPalab2(secreta);
+
         teclado.close();
     } 
     
@@ -75,7 +76,7 @@ public class ActivY {
         return palabras[indice];
     }
     
-    //Conversión
+    //Conversión a *
     public static void secretoCod(String palabras) {
     //Se va construyendo una cadena de asteriscos con la misma longitud que la palabra.
         StringBuilder simbolo = new StringBuilder(); /* Clase que permite crear y modificar cadenas de texto*/
@@ -84,5 +85,22 @@ public class ActivY {
         }
         System.out.println("Codificada: " + simbolo.toString());
     }
+
+    //Frag usando metodo String
+    public static void dividirPalab1(String palabras) {
+        String[] letras = palabras.split("(?<=.)");
+        System.out.println(Arrays.toString(letras));
+    }
+
+    //Frag usando metodo String aplicado al problema
+    //For each, en est caso en orden porque es Split()
+    public static void dividirPalab2(String palabras) {
+        String[] letras = palabras.split("(?<=.)"); /* Regex: Indica dónde dividir una cadena */
+        /* Por cada vuelta, se toma 1E, y se guarda en la Vb */
+        for (String letra : letras) {
+        System.out.println(letra);
+        }
+    }
+
 }
 
