@@ -10,7 +10,7 @@ public class Ejer2 {
         
         Scanner teclado=new Scanner(System.in);
         System.out.println("Introduce #s o esc 0 para concluir ");
-            do {
+            do { /* Do while para con el vector */
                 vector=push(vector,teclado.nextInt());
             } while (vector[vector.length-1]!=-0);
         
