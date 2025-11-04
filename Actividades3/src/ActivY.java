@@ -76,7 +76,7 @@ public class ActivY {
                 } 
             } 
             
-            //El conteo debe darse por separado, sino se hace todo de una
+            //El conteo debe darse por separado, sino se hace todo de una.
             if (rpta == true) { /* Es lo mismo que escb rpta a secas */
                 aciertos++;
             } else {
