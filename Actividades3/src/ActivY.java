@@ -10,7 +10,7 @@ public class ActivY {
         String[] vector = new String[0];
         //Palabras a la suerte
         String[] palabras = {"Ana"};
-        //Número Ramdon
+        //Número Ramdon, objeto
         Random random = new Random();
         
         Scanner teclado = new Scanner(System.in); 
