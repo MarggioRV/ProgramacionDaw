@@ -5,11 +5,15 @@ import java.util.Random;
 import java.util.Scanner;
 public class ActivY {
     public static void main(String[] args) {
+
         //Crear el vector dinamico
         String[] vector = new String[0];
-        //Palabras de la suerte
+        //Palabras a la suerte
         String[] palabras = {"Ana"};
+        //Número Ramdon
         Random random = new Random();
+        //Dibujillo
+        boolean nextG = false;
         
         Scanner teclado = new Scanner(System.in); 
         
@@ -36,14 +40,53 @@ public class ActivY {
         String secreta = (randomSeleccion(random, palabras)); /* Al declararla como variable es + facil de testear */
         System.out.println("Tu palabra de la suerte es: " + secreta);
         System.out.println();
-
-        secretoCod(secreta);
         
-        System.out.println("\nEscb la posibles letras de la palabra");
+        //Llamada_Cod
+        secretoCod(secreta);
+        System.out.println();
+
+        //Logitud_PalabraSecreta
+        int logitud = secreta.length();
+
+        //Llamada_PrubDiv
         dividirPalab1(secreta);
+        System.out.println();
         dividirPalab2(secreta);
 
-        teclado.close();
+        //Contadores
+        final int PRUEBASMAX=7;
+        int pruebas=0;
+        int aciertos=0;
+        int fallos=0;
+
+        //Juego
+        System.out.println("\nEscb una de las posibles letras de la palabra secreta");
+        
+        do {
+        String prub = teclado.nextLine();
+        pruebas++;
+
+        String[] letras = secreta.split("(?<=.)"); 
+            boolean rpta=false;
+
+            for (String letra : letras) {
+                if (letra.equalsIgnoreCase(prub)) {
+                    System.out.println("Bien");
+                    rpta = true;
+                } 
+            } 
+            
+            //El conteo debe darse por separado, sino se hace todo de una
+            if (rpta == true) { /* Es lo mismo que escb rpta a secas */
+                aciertos++;
+            } else {
+                System.out.println("Mal");
+                fallos++;
+            }
+            System.out.println("Pruebas: " + pruebas + " | Aciertos: " + aciertos + " | Fallos: " + fallos); 
+            Correspondencia(fallos);
+        } while (aciertos + fallos < logitud && pruebas < logitud && PRUEBASMAX > pruebas);
+        teclado.close(); 
     } 
     
     // Función push para String
@@ -88,19 +131,94 @@ public class ActivY {
 
     //Frag usando metodo String
     public static void dividirPalab1(String palabras) {
-        String[] letras = palabras.split("(?<=.)");
+        String[] letras = palabras.split("(?<=.)"); /* Regex: Indica dónde dividir una cadena */
         System.out.println(Arrays.toString(letras));
     }
 
-    //Frag usando metodo String aplicado al problema
-    //For each, en est caso en orden porque es Split()
+    //Frag usando metodo String y, For each, en este caso en orden porque es Split()
+    //Este sí sirve para ralizar una comparación
     public static void dividirPalab2(String palabras) {
-        String[] letras = palabras.split("(?<=.)"); /* Regex: Indica dónde dividir una cadena */
+        String[] letras = palabras.split("(?<=.)"); 
         /* Por cada vuelta, se toma 1E, y se guarda en la Vb */
         for (String letra : letras) {
-        System.out.println(letra);
+            System.out.println(letra);
+        }
+    }
+    
+    public static void Correspondencia(int fallos) {
+
+        if (fallos == 7) {
+            System.out.println("_____________________");
+            System.out.println("  |           |");
+            System.out.println("  |           O");
+            System.out.println("  |          /|\\");
+            System.out.println("  |           |");
+            System.out.println("  |          / \\");
+            System.out.println("_____________________");
+        }
+        
+        else if (fallos == 6) {
+            System.out.println("_____________________");
+            System.out.println("  |           |");
+            System.out.println("  |");
+            System.out.println("  |          /|\\");
+            System.out.println("  |           |");
+            System.out.println("  |          / \\");
+            System.out.println("_____________________");
+        }
+
+        else if (fallos == 5) {
+            System.out.println("_____________________");
+            System.out.println("  |           |");
+            System.out.println("  |");
+            System.out.println("  |           |");
+            System.out.println("  |           |");
+            System.out.println("  |          / \\");
+            System.out.println("_____________________");
+        }
+        
+        else if (fallos == 4) {
+            System.out.println("_____________________");
+            System.out.println("  |           |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |          / \\");
+            System.out.println("_____________________");
+        }
+        
+        else if (fallos == 3) {
+            System.out.println("_____________________");
+            System.out.println("  |           |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("_____________________");
+        }        
+
+        else if (fallos == 2) {
+            System.out.println();
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("_____________________");
+        }
+        
+        else if (fallos == 1) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("_____________________");
         }
     }
 
 }
+
+
 
