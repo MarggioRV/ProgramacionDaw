@@ -3,8 +3,6 @@ package Actividades3.src;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-import lb.arrays;
-
 public class ActivY {
     public static void main(String[] args) {
         //Crear el vector dinamico
@@ -21,7 +19,7 @@ public class ActivY {
         do {
             entrada = teclado.nextLine();
                 if (!entrada.equals("-1")) { /* Cualq cosa menos eso */
-                palabras = push(palabras, teclado.nextLine());
+                palabras = push(palabras, entrada); /* Ya no es neceseario leer por segunda vez, directo la variable */
                 }
         } while (!entrada.equals("-1"));
 
@@ -37,7 +35,8 @@ public class ActivY {
         System.out.println();
         secretoCod(randomSeleccion(random, palabras));
         teclado.nextLine(); //limpiador_buffer
-
+        
+        System.out.println("\nEscb la posibles letras de la palabra");
         teclado.close();
     } 
     
