@@ -28,12 +28,17 @@ public class ActivY {
         // for (int i = 0; i < 1; i++) {
         //     palabras = push(palabras, teclado.nextLine());
         // }
-
+        
+        //Area_Impresion
         System.out.println("Tus #s de la suerte son: " + Arrays.toString(palabras));
         System.out.println();
-        System.out.println("Tu palabra de la suerte es: " + randomSeleccion(random, palabras));
+        
+        String secreta = (randomSeleccion(random, palabras)); /* Al declararla como variable es + facil de testear */
+        System.out.println("Tu palabra de la suerte es: " + secreta);
         System.out.println();
-        secretoCod(randomSeleccion(random, palabras));
+
+        secretoCod(secreta);
+    
         teclado.nextLine(); //limpiador_buffer
         
         System.out.println("\nEscb la posibles letras de la palabra");
