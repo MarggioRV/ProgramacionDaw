@@ -1,8 +1,8 @@
 package Actividades3.src;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-
 import lb.arrays;
 
 public class ActivY {
