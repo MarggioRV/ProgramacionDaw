@@ -12,8 +12,6 @@ public class ActivY {
         String[] palabras = {"Ana"};
         //Número Ramdon
         Random random = new Random();
-        //Dibujillo
-        boolean nextG = false;
         
         Scanner teclado = new Scanner(System.in); 
         
@@ -46,7 +44,7 @@ public class ActivY {
         System.out.println();
 
         //Logitud_PalabraSecreta
-        int logitud = secreta.length();
+        //int logitud = secreta.length();
 
         //Llamada_PrubDiv
         dividirPalab1(secreta);
@@ -85,7 +83,7 @@ public class ActivY {
             }
             System.out.println("Pruebas: " + pruebas + " | Aciertos: " + aciertos + " | Fallos: " + fallos); 
             Correspondencia(fallos);
-        } while (aciertos + fallos < logitud && pruebas < logitud && PRUEBASMAX > pruebas);
+        } while (aciertos + fallos < PRUEBASMAX && PRUEBASMAX > pruebas);
         teclado.close(); 
     } 
     
