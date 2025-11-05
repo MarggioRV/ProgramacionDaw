@@ -85,7 +85,7 @@ public class ActivY {
             System.out.println("Pruebas: " + pruebas + " | Aciertos: " + aciertos + " | Fallos: " + fallos); 
             System.out.println("Bien");
             Correspondencia(fallos);
-        } while (aciertos + fallos < PRUEBASMAX && PRUEBASMAX > pruebas);
+        } while (aciertos + fallos < PRUEBASMAX);
         teclado.close(); 
     } 
     
