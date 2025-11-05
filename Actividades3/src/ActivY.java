@@ -32,7 +32,7 @@ public class ActivY {
         // }
         
         //Area_Impresion
-        System.out.println("Tus #s de la suerte son: " + Arrays.toString(palabras));
+        System.out.println("Tus palabras de la suerte son: " + Arrays.toString(palabras));
         System.out.println();
         
         String secreta = (randomSeleccion(random, palabras)); /* Al declararla como variable es + facil de testear */
@@ -81,7 +81,9 @@ public class ActivY {
                 System.out.println("Mal");
                 fallos++;
             }
+            System.out.println();
             System.out.println("Pruebas: " + pruebas + " | Aciertos: " + aciertos + " | Fallos: " + fallos); 
+            System.out.println("Bien");
             Correspondencia(fallos);
         } while (aciertos + fallos < PRUEBASMAX && PRUEBASMAX > pruebas);
         teclado.close(); 
@@ -91,7 +93,7 @@ public class ActivY {
     public static String[] push(String[] vector, String push) {
         String[] palabras = new String[vector.length + 1];
         for (int i = 0; i < vector.length; i++)
-        palabras[i] = vector[i];
+            palabras[i] = vector[i];
         palabras[vector.length] = push;
         return palabras;
     }
