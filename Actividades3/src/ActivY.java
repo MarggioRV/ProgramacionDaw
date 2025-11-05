@@ -9,7 +9,7 @@ public class ActivY {
         //Crear el vector dinamico
         String[] vector = new String[0];
         //Palabras a la suerte
-        String[] palabras = {"Ana"};
+        String[] palabras = {"Peral", "Tomas", "Lunes", "Angirus",};
         //Número Ramdon, objeto
         Random random = new Random();
         
@@ -44,7 +44,7 @@ public class ActivY {
         System.out.println();
 
         //Logitud_PalabraSecreta
-        //int logitud = secreta.length();
+        int logitud = secreta.length();
 
         //Llamada_PrubDiv
         dividirPalab1(secreta);
@@ -69,13 +69,13 @@ public class ActivY {
 
             for (String letra : letras) {
                 if (letra.equalsIgnoreCase(prub)) {
-                    System.out.println("Bien");
                     rpta = true;
                 } 
             } 
             
             //El conteo debe darse por separado, sino se hace todo de una.
             if (rpta == true) { /* Es lo mismo que escb rpta a secas */
+                System.out.println("Bien");
                 aciertos++;
             } else {
                 System.out.println("Mal");
@@ -85,10 +85,10 @@ public class ActivY {
             //Progreso
             System.out.println();
             System.out.println("Pruebas: " + pruebas + " | Aciertos: " + aciertos + " | Fallos: " + fallos); 
-            System.out.println("Bien");
+            System.out.println();
             Correspondencia(fallos);
-            
-        } while (aciertos + fallos < PRUEBASMAX);
+
+        } while (aciertos + fallos < PRUEBASMAX && );
         teclado.close(); 
     } 
     
@@ -148,6 +148,7 @@ public class ActivY {
         }
     }
     
+    //Dibujo del ahorcado según fallos
     public static void Correspondencia(int fallos) {
 
         if (fallos == 7) {
