@@ -54,7 +54,7 @@ public class ActivZ {
 
             boolean rpta = false;
 
-            // Recorremos la palabra secreta y actualizamos el estado
+            //Se recorre la palabra secreta, al mismo tiempo, se va actulizando
             for (int i = 0; i < secreta.length(); i++) {
                 if (String.valueOf(secreta.charAt(i)).equalsIgnoreCase(prub)) {
                     estado[i] = secreta.charAt(i); // Revela la letra
@@ -69,13 +69,13 @@ public class ActivZ {
                 System.out.println("Mal");
                 fallos++;
             }
-
-            // Mostrar progreso actual
+            
+            //Progreso
             System.out.println("Progreso: " + String.valueOf(estado));
             System.out.println("Pruebas: " + pruebas + " | Aciertos: " + aciertos + " | Fallos: " + fallos);
             Correspondencia(fallos);
 
-            // Condición de victoria: ya no quedan '*'
+            //Condición_victoria
             if (!String.valueOf(estado).contains("*")) {
                 System.out.println("¡Felicidades! Has adivinado la palabra: " + secreta);
                 break;
@@ -99,5 +99,70 @@ public class ActivZ {
         return palabras;
     }
 
+    //Elección_PalabraRandom 
+    public static String randomSeleccion(Random random, String[] palabras) {
+        int indice = random.nextInt(palabras.length);
+        return palabras[indice];
+    }
 
+    //Dibujo del ahorcado según fallos
+    public static void Correspondencia(int fallos) {
+        if (fallos == 7) {
+            System.out.println("_____________________");
+            System.out.println("  |           |");
+            System.out.println("  |           O");
+            System.out.println("  |          /|\\");
+            System.out.println("  |           |");
+            System.out.println("  |          / \\");
+            System.out.println("_____________________");
+        } else if (fallos == 6) {
+            System.out.println("_____________________");
+            System.out.println("  |           |");
+            System.out.println("  |");
+            System.out.println("  |          /|\\");
+            System.out.println("  |           |");
+            System.out.println("  |          / \\");
+            System.out.println("_____________________");
+        } else if (fallos == 5) {
+            System.out.println("_____________________");
+            System.out.println("  |           |");
+            System.out.println("  |");
+            System.out.println("  |           |");
+            System.out.println("  |           |");
+            System.out.println("  |          / \\");
+            System.out.println("_____________________");
+        } else if (fallos == 4) {
+            System.out.println("_____________________");
+            System.out.println("  |           |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |          / \\");
+            System.out.println("_____________________");
+        } else if (fallos == 3) {
+            System.out.println("_____________________");
+            System.out.println("  |           |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("_____________________");
+        } else if (fallos == 2) {
+            System.out.println();
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("_____________________");
+        } else if (fallos == 1) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("_____________________");
+        }
+    }
 }
