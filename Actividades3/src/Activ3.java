@@ -3,7 +3,7 @@ package Actividades3.src;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ActivX {
+public class Activ3 {
     public static void main(String[] args) {
         ArrayList<String> lista = new ArrayList<String>();
         Scanner teclado=new Scanner(System.in);

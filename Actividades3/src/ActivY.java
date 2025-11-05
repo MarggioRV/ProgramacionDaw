@@ -3,6 +3,8 @@ package Actividades3.src;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+
+//Variante de Ahorcado, usando StringBuilder.
 public class ActivY {
     public static void main(String[] args) {
 
@@ -12,6 +14,8 @@ public class ActivY {
         String[] palabras = {"Peral", "Tomas", "Lunes", "Angirus",};
         //Número Ramdon, objeto
         Random random = new Random();
+        //Número Ramdon, int
+        //int ramdon=(int)(Math.ramdons()*(palabras.length-1+1)
         
         Scanner teclado = new Scanner(System.in); 
         
@@ -40,7 +44,14 @@ public class ActivY {
         System.out.println();
         
         //Llamada_Cod
+        /* Solo Impresion, String es inmutable*/
+        secretoCodImpresión(secreta);
+        /* Reutilizable */
         secretoCod(secreta);
+ 
+        //Declaración_progreso, para asi guardar (Sin impM) el resultado_secretoCod()
+        StringBuilder progreso = secretoCod(secreta);
+        System.out.println("Codificada: " + progreso.toString());
         System.out.println();
 
         //Logitud_PalabraSecreta
@@ -61,17 +72,28 @@ public class ActivY {
         System.out.println("\nEscb una de las posibles letras de la palabra secreta");
         
         do {
-        String prub = teclado.nextLine();
-        pruebas++;
+            String prub = teclado.nextLine();
+            pruebas++;
 
-        String[] letras = secreta.split("(?<=.)"); 
             boolean rpta=false;
-
-            for (String letra : letras) {
-                if (letra.equalsIgnoreCase(prub)) {
+        
+         // Perdio su funcion, este for arch recorria lo generado por Split(). El array String
+         // String[] letras = secreta.split("(?<=.)");
+         //     for (String letra : letras) {
+         //         if (letra.equalsIgnoreCase(prub)) {
+         //             rpta = true;
+         //         } 
+         //     }
+            
+            char letter = prub.charAt(0);
+        
+            //En cosecuencia, se puede recorrer con un For clasico
+            for (int i = 0; i < secreta.length(); i++) {
+                if (secreta.charAt(i) == letter) {
+                    progreso.setCharAt(i, letter);
                     rpta = true;
-                } 
-            } 
+                }
+            }
             
             //El conteo debe darse por separado, sino se hace todo de una.
             if (rpta == true) { /* Es lo mismo que escb rpta a secas */
@@ -84,15 +106,19 @@ public class ActivY {
 
             //Progreso
             System.out.println();
+            System.out.println("Progreso: " + progreso.toString());
             System.out.println("Pruebas: " + pruebas + " | Aciertos: " + aciertos + " | Fallos: " + fallos); 
             System.out.println();
             Correspondencia(fallos);
 
             if (aciertos == logitud) {
+            // if (progreso.indexOf("*") == 1) { Este podría ser mejor, en caso de repitir palabras
                 System.out.println("¡Felicidades! Has adivinado la palabra: " + secreta);
+            } else if (fallos == logitud){
+                System.out.println("Game Over");
             }
 
-        } while (aciertos + fallos < PRUEBASMAX && logitud > aciertos );
+        } while (aciertos + fallos < PRUEBASMAX && logitud > aciertos);
         teclado.close(); 
     } 
     
@@ -105,38 +131,32 @@ public class ActivY {
         return palabras;
     }
 
-    // Función push
-    // public static int[] push(int[] array, int valor){
-    //     int longitud;
-    //     if (array==null) {longitud=0;}
-    //     else {longitud=array.length;}
-    //     //Crea un array con +1 de tamaño
-    //     int[] salida=new int[longitud+1];
-    //     //copiar lo que has esñ ese momento 
-    //     for (int i=0;i<longitud;i++){
-    //         salida[i]=array[i];
-    //     }
-    //     salida[longitud]=valor;
-    //     return salida;
-    // }
-    
     //Elección_PalabraRandom 
     public static String randomSeleccion(Random random, String[] palabras) {
         int indice = random.nextInt(palabras.length);
         return palabras[indice];
     }
     
-    //Conversión a *
-    public static void secretoCod(String palabras) {
-    //Se va construyendo una cadena de asteriscos con la misma longitud que la palabra.
-        StringBuilder simbolo = new StringBuilder(); /* Clase que permite crear y modificar cadenas de texto*/
-        for (int i = 0; i < palabras.length(); i++) { 
-            simbolo.append("*"); /* Metodo de la clase anterior, añade un valor a una secuencia */
+    // Solo, y Unicamente solo, impresion de la conversión de secretocod
+        public static void secretoCodImpresión(String palabras) {
+    // Se va construyendo una cadena de asteriscos con la misma longitud que la palabra.
+            StringBuilder simbolo = new StringBuilder(); 
+            for (int i = 0; i < palabras.length(); i++) { 
+                simbolo.append("*"); 
+            }
+            System.out.println("Codificada: " + simbolo.toString());
         }
-        System.out.println("Codificada: " + simbolo.toString());
+
+    // Conversión a *, reutilizable
+    public static StringBuilder secretoCod(String palabra) {
+        StringBuilder simbolo = new StringBuilder(); /* Clase que permite crear y modificar cadenas de texto*/
+            for (int i = 0; i < palabra.length(); i++) {
+                simbolo.append("*"); /* Metodo de la clase anterior, añade un valor a una secuencia */
+            }
+        return simbolo; 
     }
 
-    //Frag usando metodo String
+    //Frag usando metodo String, Split()
     public static void dividirPalab1(String palabras) {
         String[] letras = palabras.split("(?<=.)"); /* Regex: Indica dónde dividir una cadena */
         System.out.println(Arrays.toString(letras));
