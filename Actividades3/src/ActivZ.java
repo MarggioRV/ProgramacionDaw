@@ -26,7 +26,7 @@ public class ActivZ {
             }
         } while (!entrada.equals("-1"));
 
-        //Area_Impresion
+        //Area_Impresion1
         System.out.println("Tus palabras de la suerte son: " + Arrays.toString(palabras));
         System.out.println();
 
@@ -34,7 +34,7 @@ public class ActivZ {
         System.out.println("Tu palabra de la suerte es: " + secreta);
         System.out.println();
 
-        //Estado inicial de la palabra secreta (oculta con '*')
+        //Estado inicial (Palabra Secreta)
         char[] estado = new char[secreta.length()];
         Arrays.fill(estado, '*');
         System.out.println("Progreso inicial: " + String.valueOf(estado));
@@ -69,7 +69,7 @@ public class ActivZ {
                 System.out.println("Mal");
                 fallos++;
             }
-            
+
             //Progreso
             System.out.println("Progreso: " + String.valueOf(estado));
             System.out.println("Pruebas: " + pruebas + " | Aciertos: " + aciertos + " | Fallos: " + fallos);
