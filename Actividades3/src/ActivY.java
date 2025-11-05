@@ -88,6 +88,10 @@ public class ActivY {
             System.out.println();
             Correspondencia(fallos);
 
+            if (aciertos == logitud) {
+                System.out.println("¡Felicidades! Has adivinado la palabra: " + secreta);
+            }
+
         } while (aciertos + fallos < PRUEBASMAX && logitud > aciertos );
         teclado.close(); 
     } 
