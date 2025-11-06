@@ -7,7 +7,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 //Variante, usando StringBuilder, conversion a char y con validacidacion_LRep.
-public class ActivY {
+public class ActivAhorcadoB {
     public static void main(String[] args) {
 
         //Crear el vector dinamico
@@ -131,7 +131,7 @@ public class ActivY {
                 System.out.println("Prueba invalida, ya la usaste.");
             }
 
-        } while (aciertos + fallos < PRUEBASMAX && logitud > aciertos);
+        } while (fallos < PRUEBASMAX && logitud > aciertos);
         teclado.close(); 
     } 
     
