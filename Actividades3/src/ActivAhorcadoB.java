@@ -17,7 +17,7 @@ public class ActivAhorcadoB {
         //Número Ramdon, objeto
         Random random = new Random();
         //Número Ramdon, int
-        //int ramdon=(int)(Math.ramdons()*(palabras.length-1+1)
+        //int ramdon=(int)(Math.ramdon()*(palabras.length-1+1)
         
         Scanner teclado = new Scanner(System.in); 
         
