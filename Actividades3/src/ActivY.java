@@ -1,10 +1,12 @@
 package Actividades3.src;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Set;
 
-//Variante de Ahorcado, usando StringBuilder.
+//Variante, usando StringBuilder, conversion a char y con validacidacion_LRep.
 public class ActivY {
     public static void main(String[] args) {
 
@@ -22,6 +24,7 @@ public class ActivY {
         //Insertar un Valores
         String entrada; /* Para la vs do while, doble función */
         System.out.println("Esc palabras para agregar o -1 para comenzar: ");
+
         do {
             entrada = teclado.nextLine();
                 if (!entrada.equals("-1")) { /* Cualq cosa menos eso */
@@ -71,51 +74,61 @@ public class ActivY {
         //Juego
         System.out.println("\nEscb una de las posibles letras de la palabra secreta");
         
+        //Set es una coleccion que guarda elementos No repetidos
+        Set<Character> letrasUsadas = new HashSet<>(); /* Mientras character, especifica que es para char */
         do {
             String prub = teclado.nextLine();
-            pruebas++;
+            //Declaración de String a char
+            char letraChar = prub.charAt(0);
 
-            boolean rpta=false;
-        
-         // Perdio su funcion, este for arch recorria lo generado por Split(). El array String
-         // String[] letras = secreta.split("(?<=.)");
-         //     for (String letra : letras) {
-         //         if (letra.equalsIgnoreCase(prub)) {
-         //             rpta = true;
-         //         } 
-         //     }
+            pruebas++;
             
-            char letter = prub.charAt(0);
+            if (letraRepetida(letrasUsadas, letraChar)) {
+
+                boolean rpta=false;
+        
+             // Perdio su funcion, este for arch recorria lo generado por Split(). El array String
+             // String[] letras = secreta.split("(?<=.)");
+             //     for (String letra : letras) {
+             //         if (letra.equalsIgnoreCase(prub)) {
+             //             rpta = true;
+             //         } 
+             //     }
         
             //En cosecuencia, se puede recorrer con un For clasico
-            for (int i = 0; i < secreta.length(); i++) {
-                if (secreta.charAt(i) == letter) {
-                    progreso.setCharAt(i, letter);
+                for (int i = 0; i < secreta.length(); i++) {
+                    if (Character.toLowerCase(secreta.charAt(i)) == Character.toLowerCase(letraChar)) { /* Convierte cada letra de Mayus a Minus */
+                    // if (String.valueOf(secreta.charAt(i)).equalsIgnoreCase(String.valueOf(letter))) Ignora Mayus
+                    progreso.setCharAt(i, letraChar);
                     rpta = true;
+                    }
                 }
-            }
             
-            //El conteo debe darse por separado, sino se hace todo de una.
-            if (rpta == true) { /* Es lo mismo que escb rpta a secas */
-                System.out.println("Bien");
-                aciertos++;
+                //El conteo debe darse por separado, sino se hace todo de una.
+                if (rpta == true) { /* Es lo mismo que escb rpta a secas */
+                    System.out.println("Bien");
+                    aciertos++;
+                } else {
+                    System.out.println("Mal");
+                    fallos++;
+                }
+
+                //Progreso
+                System.out.println();
+                System.out.println("Progreso: " + progreso.toString());
+                System.out.println("Pruebas: " + pruebas + " | Aciertos: " + aciertos + " | Fallos: " + fallos); 
+                System.out.println();
+                Correspondencia(fallos);
+
+                if (aciertos == logitud) {
+                    // if (progreso.indexOf("*") == 1) { Este podría ser mejor, en caso de repitir palabras
+                    System.out.println("¡Felicidades! Has adivinado la palabra: " + secreta);
+                } else if (fallos == logitud){
+                    System.out.println("Game Over");
+                }
+            
             } else {
-                System.out.println("Mal");
-                fallos++;
-            }
-
-            //Progreso
-            System.out.println();
-            System.out.println("Progreso: " + progreso.toString());
-            System.out.println("Pruebas: " + pruebas + " | Aciertos: " + aciertos + " | Fallos: " + fallos); 
-            System.out.println();
-            Correspondencia(fallos);
-
-            if (aciertos == logitud) {
-            // if (progreso.indexOf("*") == 1) { Este podría ser mejor, en caso de repitir palabras
-                System.out.println("¡Felicidades! Has adivinado la palabra: " + secreta);
-            } else if (fallos == logitud){
-                System.out.println("Game Over");
+                System.out.println("Prueba invalida, ya la usaste.");
             }
 
         } while (aciertos + fallos < PRUEBASMAX && logitud > aciertos);
@@ -243,6 +256,18 @@ public class ActivY {
             System.out.println();
             System.out.println();
             System.out.println("_____________________");
+        }
+    }
+
+    //Comprobar que las letras ≠, probando nueva comprovación
+    public static boolean letraRepetida(Set<Character> letrasUsadas, char letra) {
+
+        if (letrasUsadas.contains(letra)) { /* Contains tmb es metodo_colecc, usado asi = ¿Esta X en coleccionY? */
+            System.out.println(letra + ", ya esta usada");
+            return false; //Sí está repetida
+        } else {
+            letrasUsadas.add(letra); //Se pRocede a registrar
+            return true; 
         }
     }
 
