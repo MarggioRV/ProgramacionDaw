@@ -123,7 +123,7 @@ public class ActivAhorcadoB {
                 if (aciertos == logitud) {
                     // if (progreso.indexOf("*") == 1) { Este podría ser mejor, en caso de repitir palabras
                     System.out.println("¡Felicidades! Has adivinado la palabra: " + secreta);
-                } else if (fallos == logitud){
+                } else if (fallos == PRUEBASMAX){
                     System.out.println("Game Over");
                 }
             
@@ -131,7 +131,7 @@ public class ActivAhorcadoB {
                 System.out.println("Prueba invalida, ya la usaste.");
             }
 
-        } while (fallos < PRUEBASMAX && logitud > aciertos);
+        } while (aciertos + fallos < PRUEBASMAX && logitud > aciertos);
         teclado.close(); 
     } 
     
