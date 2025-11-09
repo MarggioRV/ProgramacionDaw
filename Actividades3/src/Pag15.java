@@ -1,6 +1,7 @@
 package Actividades3.src;
 
 import java.util.Scanner;
+import java.util.Set;
 
 public class Pag15 {
 
@@ -15,7 +16,7 @@ public class Pag15 {
         //De tener tamaños fijos, no es necesario una función push
         for (int i = 0; i < alumnos.length; i++) {
             for (int j = 0; j < modulos.length; j++) {
-                notas[i][j] = Math.random() * 10; // nota aleatoria entre 0 y 10
+                notas[i][j] = Math.random() * 10; //nota aleatoria entre 0 y 10
             }
         }
 
@@ -41,7 +42,7 @@ public class Pag15 {
         teclado.nextLine();
         
         //Lista de AlumnosDina
-        System.out.println("Selecciona un alumno por índice:");
+        System.out.println("Selecciona un alumno por su índice:");
         for (int i = 0; i < alumnos.length; i++) {
             System.out.println((i+1) + ". " + alumnos[i]);
         }
@@ -53,6 +54,7 @@ public class Pag15 {
         System.out.println();
         
         CalcularMedia(fulano);
+
     }
     
     //Dado que maxNota y minNota son eso mismo, han de reutlizarse como inicializadores
@@ -85,4 +87,27 @@ public class Pag15 {
         System.out.printf("Máxima: %.2f\n", maxNota);
         System.out.printf("Mínima: %.2f\n", minNota);
     }
+
+    // //Comprobar aprovado
+    // public static void Aprov(int alumnos, double materias, double[] notas, int fulano) {
+         
+    //     int contadoNota=0;
+
+    //     for (int j = 0; j < modulos.length; j++) {
+    //         double nota = notas[fulano][j];
+    //         contadorNota += nota; /* acumula la nota */
+    //     }
+    // }
+
+    // public static void queAprov(int alumnos, double materias, double[] notas, int fulano) {
+    //     //Variables a tratar
+    //     int contadoNota=0;
+    //     for (int j = 0; j < modulos.length; j++) {
+    //         double nota = notas[fulano][j];
+    //         contadorNota += nota; /* acumula la nota */
+    //     }
+    // }
+
+    //Eliminar columna
+
 }
