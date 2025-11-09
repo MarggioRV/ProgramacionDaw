@@ -38,9 +38,11 @@ public class Ejer6 {
 
         for (int i = 0; i < filas; i++) {
             double suma = 0;
-            double producto = 0;
+           /*  El contador poducto No puede ser 0, debido a la logica (1 * x = x) */
+            double producto = 1;
             double media = 0;
-
+            
+            /*  Sin +=, no se va acumlando las operaciones en el recorrido */
             for (int j = 0; j < columnas; j++) {
                 suma += m1[i][j] + m2[i][j];
                 producto *= m1[i][j] * m2[i][j];
