@@ -5,7 +5,7 @@ las matrices pasadas como argumento. */
 public class Ejer6 {
     public static void main(String[] args) {
 
-        //Declaración de matrices 
+        //Declaración_matrices 
 
         double[][] matriz1 = {
             {1, 2, 3}, {4, 5, 6}

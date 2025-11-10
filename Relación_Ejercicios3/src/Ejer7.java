@@ -12,15 +12,15 @@ public class Ejer7 {
             for (int j = 0; j < 5; j++)
                 matriz[i][j] = (int)(Math.random() * 101);
 
-        //Llamadas
+        //Llamadas e Impresiones
 
-        //Mostrar matriz original
+        //Matriz Original
         imprimirMatriz(matriz, "Matriz Original");
 
-        //Rotar matriz
+        //Rotación
         matriz = rotarMatriz(matriz);
 
-        //Mostrar matriz rotada
+        //Actulización
         imprimirMatriz(matriz, "Matriz Rotada");
     }
 
