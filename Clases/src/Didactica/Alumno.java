@@ -1,4 +1,4 @@
-package didactica;
+package Didactica;
 
 public class Alumno {
     public String Nombre;

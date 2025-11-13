@@ -1,5 +1,4 @@
 package clases;
-
 public class Libro {
     //Atributos
     private String ISBN;
@@ -73,4 +72,5 @@ public class Libro {
             this.editorial.imprimeEditorial();
     }
 }
+
 

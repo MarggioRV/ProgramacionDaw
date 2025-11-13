@@ -1,6 +1,6 @@
 package administracion;
 
-import didactica.Alumno;
+import Didactica.Alumno;
 
 public class Matricula {
     int numero;

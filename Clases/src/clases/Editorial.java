@@ -1,5 +1,4 @@
 package clases;
-
 public class Editorial {
     //Atributos
     private int codigo;

@@ -4,7 +4,7 @@ import clases.Libro;
 public class Actividad3Clases {
     public static void main(String[] args) {
         //Crear los objetos
-        Libro libro1=new Libro("12312535232424","La isla del tesoro",1987,19.95);
+        Libro libro1 = new Libro("5555", "Java para principiantes", 2020, 1, 29.99);
         Editorial ed1= new Editorial(1,"Santillana",1984);
 
         //Imprimir el contenido
