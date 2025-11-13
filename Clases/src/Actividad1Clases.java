@@ -11,6 +11,6 @@ public class Actividad1Clases {
 
         System.out.println(Matematicas.suma(a,b));
 
-        System.out.println(p.nom);
+        System.out.println(Matematicas.resta(a,b));
     }   
 }

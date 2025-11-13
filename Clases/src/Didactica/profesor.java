@@ -7,6 +7,6 @@ public class Profesor {
 
     public Profesor(){
         a.getNombre();
-        a.
+        a.setNOmbre(nombre);
     }
 }

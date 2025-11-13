@@ -6,7 +6,6 @@ public class Alumno {
     String direccion;
 
     public Alumno(){
-
     }
 
 

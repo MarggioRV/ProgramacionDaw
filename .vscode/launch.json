@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Actividad2Clase",
+            "request": "launch",
+            "mainClass": "Actividad2Clase",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
+            "name": "Persona",
+            "request": "launch",
+            "mainClass": "Persona",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
             "name": "Pag6",
             "request": "launch",
             "mainClass": "Actividades4.Pag6",

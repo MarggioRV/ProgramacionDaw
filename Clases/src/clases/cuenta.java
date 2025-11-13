@@ -17,7 +17,9 @@ public class Cuenta {
     //get y set
 
     public void imprimeCuenta(){
-        System.out.println("Imprime la cuenta");
+        System.out.println("Número de cuenta bancaria: "+this.numeroCuenta);
+        System.out.println("Saldo de la cuenta: "+this.saldo);
+        this.cliente.imprimePersona();
     }
     
 }
