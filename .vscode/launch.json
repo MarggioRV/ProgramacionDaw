@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Pag6",
+            "request": "launch",
+            "mainClass": "Actividades4.Pag6",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
+            "name": "EvaluacionArray",
+            "request": "launch",
+            "mainClass": "Actividades3.src.EvaluacionArray",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
+            "name": "pag20",
+            "request": "launch",
+            "mainClass": "Actividades3.src.pag20",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
             "name": "Ejer5B",
             "request": "launch",
             "mainClass": "Ejer5B",

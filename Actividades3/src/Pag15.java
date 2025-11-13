@@ -87,7 +87,6 @@ public class Pag15 {
         System.out.printf("Máxima: %.2f\n", maxNota);
         System.out.printf("Mínima: %.2f\n", minNota);
     }
-
     // //Comprobar aprovado
     // public static void Aprov(int alumnos, double materias, double[] notas, int fulano) {
          
