@@ -1,4 +1,4 @@
-package clases;
+package Clases;
 
 public class Persona {
     String nombre;
@@ -9,8 +9,8 @@ public class Persona {
     Boolean estadoCivil;
 
     public Persona(){
-
     }
+    
     public Persona(String nombre, String DNI, String fecha, String direccion, Boolean genero,Boolean estado){
         this.nombre=nombre;
         this.DNI=DNI;
@@ -40,6 +40,6 @@ public class Persona {
     }
 
     public void imprimePersona(){
-        System.out.println("Imprme persona");
+        System.out.println("Imprime persona");
     }
 }

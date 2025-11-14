@@ -1,5 +1,5 @@
-import clases.Editorial;
-import clases.Libro;
+import Clases.Editorial;
+import Clases.Libro;
 
 public class Actividad3Clases {
     public static void main(String[] args) {

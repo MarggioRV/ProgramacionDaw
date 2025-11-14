@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Actividad3Clases",
+            "request": "launch",
+            "mainClass": "Actividad3Clases",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
             "name": "Actividad2Clase",
             "request": "launch",
             "mainClass": "Actividad2Clase",

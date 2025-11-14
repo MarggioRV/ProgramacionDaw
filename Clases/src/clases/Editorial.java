@@ -1,4 +1,4 @@
-package clases;
+package Clases;
 public class Editorial {
     //Atributos
     private int codigo;
