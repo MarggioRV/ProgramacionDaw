@@ -7,7 +7,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 //Variante, usando StringBuilder, conversion a char y con validacidacion_LRep.
-public class ActivAhorcadoB {
+public class AhorcadoStringBuilder {
     public static void main(String[] args) {
 
         //Crear el vector dinamico

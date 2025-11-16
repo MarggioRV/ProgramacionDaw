@@ -88,7 +88,7 @@ public class pag20_21 {
     }
 
      
-    //ResolverDesde...
+    //ResolverDesde
     public static boolean resolverDesde(int x, int y, char[][] tablero, int[][] solucion){
     
     if(noMeta(x, y, tablero, solucion)) {
