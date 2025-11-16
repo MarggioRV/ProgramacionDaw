@@ -2,7 +2,7 @@ package Actividades3.src;
 
 import java.util.Scanner;
 
-public class pag20_21 {
+public class OchoReinasNoValido {
 // ALGORITMO OchoReinas
 //  CREAR tablero[8][8] con ceros
 //  LEER primeraColumna
@@ -91,21 +91,21 @@ public class pag20_21 {
     //ResolverDesde
     public static boolean resolverDesde(int x, int y, char[][] tablero, int[][] solucion){
     
-    if(noMeta(x, y, tablero, solucion)) {
-        return true;
-    }
+        if(noMeta(x, y, tablero, solucion)) {
+            return true;
+        }
 
-    if(esSeguro(x, y, tablero)) {
-        solucion[x][y] = 1;
+        if(esSeguro(x, y, tablero)) {
+            solucion[x][y] = 1;
 
-        if(resolverDesde(x+1, y, tablero, solucion)) return true;
-        if(resolverDesde(x, y+1, tablero, solucion)) return true;
-        if(resolverDesde(x-1, y, tablero, solucion)) return true;
-        if(resolverDesde(x, y-1, tablero, solucion)) return true;
+            if(resolverDesde(x+1, y, tablero, solucion)) return true;
+            if(resolverDesde(x, y+1, tablero, solucion)) return true;
+            if(resolverDesde(x-1, y, tablero, solucion)) return true;
+            if(resolverDesde(x, y-1, tablero, solucion)) return true;
            
-        //Backtracking***
-        solucion[x][y] = 0; 
-    }
+            //Backtracking***
+            solucion[x][y] = 0; 
+        }
     return false;
-}
+    }
 }

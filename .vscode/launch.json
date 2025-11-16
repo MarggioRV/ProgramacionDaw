@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "pag20_21",
+            "request": "launch",
+            "mainClass": "Actividades3.src.pag20_21",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
             "name": "AhorcadoCorregido",
             "request": "launch",
             "mainClass": "Actividades3.src.AhorcadoCorregido",
