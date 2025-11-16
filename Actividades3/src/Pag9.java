@@ -60,9 +60,9 @@ public class Pag9 {
     
     //Dado que maxNota y minNota son eso mismo, han de reutlizarse como inicializadores
     public static void CalcularDatos(int fulano) {
-
         //Variables a tratar
         double contadorSumaNota=0;
+        int modulosOk = 0; /* Contador_ModulosAprovados */
         /* Estas sirven de arranque */
         double maxNota = notas[fulano][0];
         double minNota = notas[fulano][0];
@@ -70,12 +70,24 @@ public class Pag9 {
         //Recorre todas las asignaturas, del Alumno, y extrae las notas 
         for (int j = 0; j < modulos.length; j++) {
             double nota = notas[fulano][j];
-            contadorSumaNota += nota; /* acumula la nota */
-            /* Con esto, se determina cual es cual en cada caso */
-            if (nota > maxNota) {
-                maxNota = nota;
-            } else if (nota < minNota) { 
-                minNota = nota;
+            contadorSumaNota += nota; /* Acumula la nota */
+            
+            // Con esto, se determina cual es cual en cada caso */
+            // if (nota > maxNota) {
+            //     maxNota = nota;
+            // } else if (nota < minNota) { 
+            //     minNota = nota;
+            // }
+            
+            ////Math.max / Math.min, pueden sustituir a los if en en estos casos
+            maxNota = Math.max(maxNota, nota);
+            minNota = Math.min(minNota, nota);
+            
+            //Contando los aprovados, se puede simplificar con modulosAprobados += (nota >= 5) ? 1 : 0;
+            if (nota >= 5) { 
+                modulosOk++;
+            } else {
+                modulosOk += 0;
             }
         }
         
@@ -87,6 +99,7 @@ public class Pag9 {
         System.out.printf("Media: %.2f\n", media);
         System.out.printf("Máxima: %.2f\n", maxNota);
         System.out.printf("Mínima: %.2f\n", minNota);
+        System.out.println("Módulos aprobados: " + modulosOk + "/" + modulos.length);
     }
 
     //Funcion Impresora_AlumnosOk
