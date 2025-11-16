@@ -25,7 +25,7 @@ public class Matrices {
 
         // for(int i=0; i<filas; i++){
         //     matriz[i][j]=(int)Math.random()*(100)+1;
-        // }
+        // }                
   
     }
 

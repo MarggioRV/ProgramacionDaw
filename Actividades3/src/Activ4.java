@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /* Actividad: Crea una función que borra un valor en el array. Ej: Quitar 2 → {3,5,7,8} */
-public class Activ2 {
+public class Activ4 {
     public static void main(String[] args) {
 
         //Array y variable
@@ -57,7 +57,7 @@ public class Activ2 {
             }
         }
 
-        //Nuevo Array, con tamaño diferente y adecuado
+        //Nuevo Array, con tamaño justo
         int [] nuevoArray= new int[array.length-contador];
         int indice=0; /* Es necesario ingresar un indice para el nuevo array */
 
