@@ -18,7 +18,7 @@ public class Activ5 {
 
         //Entrada_Valores
         System.out.println();
-        System.out.println("Esc el # a insertar:");
+        System.out.println("Esc el # a insertar (Recordar que se cuenta desde 0):");
         int valor = teclado.nextInt();
 
         System.out.println("Ahora, en donde hacerlo:");
