@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ejer2 {
@@ -46,7 +45,7 @@ public class Ejer2 {
         else {longitud=array.length;}
         //Crea un array con +1 de tamaño
         int[] salida=new int[longitud+1];
-        //copiar lo que has esñ ese momento 
+        //copiar lo que hay hasta ese momento 
         for (int i=0;i<longitud;i++){
             salida[i]=array[i];
         }

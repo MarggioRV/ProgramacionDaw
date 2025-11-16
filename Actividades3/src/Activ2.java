@@ -1,83 +1,53 @@
 package Actividades3.src;
 
-import java.util.Arrays;
-
+import java.util.Scanner;
 public class Activ2 {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
 
-        int[][] matriz = new int[3][2]; 
+        String[] dias = {"Lunes","Martes","Miercoles","Jueves","Viernes"};
 
-        //Insertar valores (Por decena)
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = (i) + (j * 10);
-            }
-        }
-
-        //Imprimir Matriz
+        String[][] horario = {
+            {"IPE", "SIST.INF", "GBD", "GBD", "PROG","PROG"},
+            {"LMSGI", "SIST.INF", "SIST.INF", "PROG","PROG", "ENT-DESA"},
+            {"GBD", "GBD", "SIST.INF", "SIST.INF", "PROG", "PROG"},
+            {"PROG", "ENT-DESA", "ENT-DESA", "IPE","GBD", "SOSTB"},
+            {"GBD", "Digit", "LMSGI", "LMSGI","IPE", "PROG"}
+        };
         
-        /* Por for */
-        System.out.println("La Matriz contiene: ");
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[0].length; j++) {
-                System.out.print(matriz[i][j] + " ");
-            }
-        System.out.println();
-        }
+        Scanner teclado = new Scanner(System.in);
+        int opcion = 0;
+        boolean valido;
 
-        /* Similar a toString, pero recorre todos los niveles, por eso puede imprimir Arrays_Arrays */
-        System.out.println(Arrays.deepToString(matriz));
-
-        /* Llamadas */
-        sumaFilas(matriz);
-        suma_CadaFila(matriz);
-        sumaColumnas(matriz);
-        suma_CadaColumna(matriz);
-    }
-
-    //Suma_Filas
-    public static void sumaFilas(int[][] matriz) {
-        int filasTotal = 0;
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                filasTotal += matriz[i][j];
+        do {
+            System.out.println("Elige el #Día para ver el horario (1-5), o 7 para salir ");
+            if (teclado.hasNextInt()) { /* Numero entero valido */
+                opcion = teclado.nextInt();
+                if ((opcion >= 1 && opcion <= 5) || opcion == 7) {
+                    valido = true;
+                } else {
+                    valido = false;
+                }
+            } else {
+                valido = false;
+                teclado.next(); //  Despeja, en caso de entrada no válida
             }
-        }
-        System.out.println("\nTotal_filas: " + filasTotal);
-    }
-    
-    //Suma_x_Fila
-    public static void suma_CadaFila(int[][] matriz) {
-        for (int i = 0; i < matriz.length; i++) {
-            int sumaFila = 0;
-            for (int j = 0; j < matriz[i].length; j++) {
-                sumaFila += matriz[i][j];
+            
+            if (valido && opcion != 7) {
+                System.out.println("···====···====···====···====···====···====···====···====···");
+                System.out.println();
+                System.out.println(  "      Hora       |    "+ dias[opcion - 1]); /* Dias con sus h. Para que el i funcione: [i-1] */
+                System.out.println("----------------------------------");
+                System.out.println("  08:00-09:00    |  " + horario[opcion - 1][0]); /* Se empieza desde 0 */
+                System.out.println("  09:00-10:00    |  " + horario[opcion - 1][1]);
+                System.out.println("  10:00-11:00    |  " + horario[opcion - 1][2]);
+                System.out.println("==================================");
+                System.out.println("  11:30-12:30    |  " + horario[opcion - 1][3]);
+                System.out.println("  12:30-01:30    |  " + horario[opcion - 1][4]);
+                System.out.println("  01:30-02:30    |  " + horario[opcion - 1][5]);
+                System.out.println();
             }
-        System.out.println("Suma fila " + i + ": " + sumaFila);
-        }
-    }
+        } while (opcion != 7);
 
-    //Suma_Columnas
-    public static void sumaColumnas(int[][] matriz) {
-        int totalColumnas = 0;
-        for (int i = 0; i < matriz.length; i++) {          /* Con i, seleccion fil y de ella, sus columnas */
-            for (int j = 0; j < matriz[i].length; j++) {   
-                totalColumnas += matriz[i][j];
-            }
-        }
-        System.out.println("\nTotal_Columnas: " + totalColumnas);
-    }
-
-    
-    //Suma_x_Columna
-    public static void suma_CadaColumna(int[][] matriz) {
-        int columnas = matriz[0].length; 
-        for (int j = 0; j < columnas; j++) {
-            int sumaColumna = 0;
-            for (int i = 0; i < matriz.length; i++) {
-                sumaColumna += matriz[i][j];
-            }
-            System.out.println("Suma x columna " + j + ": " + sumaColumna);
-        }
+        teclado.close(); 
     }
 }

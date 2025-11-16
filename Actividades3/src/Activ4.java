@@ -21,15 +21,15 @@ public class Activ4 {
         System.out.println();
         
         //Se completa los elementos para sacar el nuevo Array
-        int[] nuevoArray = BorrarValor(array, borrar);
+        int[] nuevoArray = PopMore(array, borrar);
         
         //Impresión
 
-        /*==Por metodo integrado==*/
+        /*==Por Metodo Integrado==*/
         System.out.println("Quedaría como: " + Arrays.toString(nuevoArray));
         System.out.println();
         
-        /*==Por metodos No integrados==*/
+        /*==Por Metodos No Integrados==*/
 
         /* Por for */
         System.out.println("Repito:"); 
@@ -38,29 +38,26 @@ public class Activ4 {
         }
 
         /* Por for-each */
-        System.out.println("\nRepito por 3ra vez:"); /* +Simple, pero no usa indice: No se ordena al rellenar */
+        System.out.println("\nRepito por 3ra vez:"); /* +Simple, pero no usa indice, no sirve en ciertos casos.*/
         for(int i: nuevoArray){
             System.out.print(" "+ (i));
         }
         
         teclado.close();
     }
-
-    public static int[] BorrarValor(int[] array, int valor){
-        
+    
+    //Funcion para no borrar solo el último valor
+    public static int[] PopMore(int[] array, int valor){
         int contador=0;
-
-        //Contador con for
+        //Contador con for each
         for (int num:array) {
-            if (num==valor) { /* Cual elemento que sea el mismo # */
+            if (num==valor) { /* Cualq E que sea = # */
                 contador++;
             }
         }
-
         //Nuevo Array, con tamaño justo
         int [] nuevoArray= new int[array.length-contador];
         int indice=0; /* Es necesario ingresar un indice para el nuevo array */
-
         //Rellenar el Array, obviando al #
         for (int num:array) {
             if (num!=valor) { /* Cualq elemento que No sea el mismo # */
