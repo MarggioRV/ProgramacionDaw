@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Activ9B",
+            "request": "launch",
+            "mainClass": "Actividades3.src.Activ9B",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
             "name": "Pag9",
             "request": "launch",
             "mainClass": "Actividades3.src.Pag9",

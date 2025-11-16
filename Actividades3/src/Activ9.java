@@ -1,7 +1,9 @@
 package Actividades3.src;
 
 import java.util.Scanner;
-public class Pag9 {
+
+/* Actividad 9: Del sub-postulado 1-4*/
+public class Activ9 {
 
     public static String[] modulos = { "Programación", "Entornos", "B.Datos", "Sistemas" };
     public static String[] alumnos = { "José", "Ana", "María", "Luis", "Domingo" };    
@@ -58,7 +60,7 @@ public class Pag9 {
 
     }
     
-    //Dado que maxNota y minNota son eso mismo, han de reutlizarse como inicializadores
+    //Funcion para Calcular los Datos x Alumno
     public static void CalcularDatos(int fulano) {
         //Variables a tratar
         double contadorSumaNota=0;
@@ -105,7 +107,7 @@ public class Pag9 {
     //Funcion Impresora_AlumnosOk
     public static void AlumnosOk() {
         System.out.println("Han aprobado:");
-        //
+        //Se recorre y verifica cada alumno
         for (int i = 0; i < alumnos.length; i++) {
             boolean aprobado = false;
             for (int j = 0; j < modulos.length; j++) {

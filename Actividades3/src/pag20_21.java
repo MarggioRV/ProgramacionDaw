@@ -2,7 +2,7 @@ package Actividades3.src;
 
 import java.util.Scanner;
 
-public class pag20 {
+public class pag20_21 {
 // ALGORITMO OchoReinas
 //  CREAR tablero[8][8] con ceros
 //  LEER primeraColumna
@@ -18,7 +18,7 @@ public class pag20 {
     static final char PIEZA='#';
     public static void main(String[] args) {
 
-        //Laberinto
+        //Tablero
         char[][] tablero = {
             {'0', '#', '#', '0', '#'},
             {'#', '0', '#', '#', '0'},

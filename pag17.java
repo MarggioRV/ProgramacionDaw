@@ -1,6 +1,4 @@
-package Actividades3.src;
 
-import java.util.Scanner;
 
 // public class pag17 {
 
