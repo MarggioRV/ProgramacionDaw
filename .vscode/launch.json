@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Activ2",
+            "request": "launch",
+            "mainClass": "Actividades3.src.Activ2",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
+            "name": "Ejer4B",
+            "request": "launch",
+            "mainClass": "Ejer4B",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
             "name": "Activ1",
             "request": "launch",
             "mainClass": "Actividades3.src.Activ1",
