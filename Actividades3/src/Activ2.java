@@ -48,15 +48,15 @@ public class Activ2 {
     
     //Suma_x_Fila
     public static void suma_CadaFila(int[][] matriz) {
-        int fila = matriz[0].length; 
-        for (int j = 0; j < fila; j++) {
+        for (int i = 0; i < matriz.length; i++) {
             int sumaFila = 0;
-            for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
                 sumaFila += matriz[i][j];
             }
-            System.out.println("Suma x filas " + j + ": " + sumaFila);
+        System.out.println("Suma fila " + i + ": " + sumaFila);
         }
     }
+
 
     //Suma_Columnas
     public static void sumaColumnas(int[][] matriz) {
