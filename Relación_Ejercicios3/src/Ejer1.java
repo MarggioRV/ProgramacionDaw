@@ -48,8 +48,7 @@ public class Ejer1 {
         teclado.close();
     }
 
-    
-
+    //Función Push
     public static int[] push(int[] array, int valor){
         int longitud;
         if (array==null) {longitud=0;}

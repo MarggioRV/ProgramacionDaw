@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Activ5",
+            "request": "launch",
+            "mainClass": "Actividades3.src.Activ5",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
             "name": "Activ4",
             "request": "launch",
             "mainClass": "Actividades3.src.Activ4",
