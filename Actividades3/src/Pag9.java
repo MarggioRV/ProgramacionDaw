@@ -1,13 +1,11 @@
 package Actividades3.src;
 
 import java.util.Scanner;
-import java.util.Set;
-
-public class Pag15 {
+public class Pag9 {
 
     public static String[] modulos = { "Programación", "Entornos", "B.Datos", "Sistemas" };
     public static String[] alumnos = { "José", "Ana", "María", "Luis", "Domingo" };    
-    public static double[][] notas = new double[5][4]; /* matriz bidimencional */
+    public static double[][] notas = new double[5][4]; 
 
     public static void main(String[] args) {
 
@@ -41,24 +39,25 @@ public class Pag15 {
         //Limpiador_buffer
         teclado.nextLine();
         
-        //Lista de AlumnosDina
+        //Lista_AlumnosCreados
         System.out.println("Selecciona un alumno por su índice:");
+        //Impresion_Lista
         for (int i = 0; i < alumnos.length; i++) {
             System.out.println((i+1) + ". " + alumnos[i]);
         }
         System.out.println();
 
-        //Lista de AlumnosDina
+        //Seleccion_Alumno
         int fulano = teclado.nextInt();
         System.out.println("Has elegido: " + alumnos[fulano-1]);
         System.out.println();
         
-        CalcularMedia(fulano);
+        CalcularDatos(fulano-1); /* Aqui tambien se ponia -1, sino no se ajustaba al indice creado */
 
     }
     
     //Dado que maxNota y minNota son eso mismo, han de reutlizarse como inicializadores
-    public static void CalcularMedia(int fulano) {
+    public static void CalcularDatos(int fulano) {
 
         //Variables a tratar
         double contadorSumaNota=0;
@@ -66,7 +65,7 @@ public class Pag15 {
         double maxNota = notas[fulano][0];
         double minNota = notas[fulano][0];
         
-        //Este for ecorre todas las asignaturas, del Alumno, y extrae las notas 
+        //Recorre todas las asignaturas, del Alumno, y extrae las notas 
         for (int j = 0; j < modulos.length; j++) {
             double nota = notas[fulano][j];
             contadorSumaNota += nota; /* acumula la nota */
@@ -87,26 +86,5 @@ public class Pag15 {
         System.out.printf("Máxima: %.2f\n", maxNota);
         System.out.printf("Mínima: %.2f\n", minNota);
     }
-    // //Comprobar aprovado
-    // public static void Aprov(int alumnos, double materias, double[] notas, int fulano) {
-         
-    //     int contadoNota=0;
-
-    //     for (int j = 0; j < modulos.length; j++) {
-    //         double nota = notas[fulano][j];
-    //         contadorNota += nota; /* acumula la nota */
-    //     }
-    // }
-
-    // public static void queAprov(int alumnos, double materias, double[] notas, int fulano) {
-    //     //Variables a tratar
-    //     int contadoNota=0;
-    //     for (int j = 0; j < modulos.length; j++) {
-    //         double nota = notas[fulano][j];
-    //         contadorNota += nota; /* acumula la nota */
-    //     }
-    // }
-
-    //Eliminar columna
 
 }

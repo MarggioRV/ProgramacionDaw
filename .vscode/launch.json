@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Pag9",
+            "request": "launch",
+            "mainClass": "Actividades3.src.Pag9",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
+            "name": "Pag15",
+            "request": "launch",
+            "mainClass": "Actividades3.src.Pag15",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
+            "name": "Activ7",
+            "request": "launch",
+            "mainClass": "Actividades3.src.Activ7",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
+            "name": "Activ6",
+            "request": "launch",
+            "mainClass": "Actividades3.src.Activ6",
+            "projectName": "ProgramacionDaw_8cfc4428"
+        },
+        {
+            "type": "java",
             "name": "Activ5",
             "request": "launch",
             "mainClass": "Actividades3.src.Activ5",
