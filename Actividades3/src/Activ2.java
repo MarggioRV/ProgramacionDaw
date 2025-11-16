@@ -1,7 +1,7 @@
 package Actividades3.src;
 
 import java.util.Scanner;
-public class Activ2 {
+public class Activ2 { /* Como el ejer5B, de la relacion anterior */
      public static void main(String[] args) {
 
         String[] dias = {"Lunes","Martes","Miercoles","Jueves","Viernes"};
@@ -29,7 +29,7 @@ public class Activ2 {
                 }
             } else {
                 valido = false;
-                teclado.next(); //  Despeja, en caso de entrada no válida
+                teclado.next();  /* Despeja, en caso de entrada no válida */
             }
             
             if (valido && opcion != 7) {
