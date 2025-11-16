@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Activ2 {
     public static void main(String[] args) {
 
-        int[][] matriz = new int[3][2]; //Al ser cuadrilateral, no hay problema
+        int[][] matriz = new int[3][2]; 
 
         //Insertar valores (Por decena)
         for (int i = 0; i < matriz.length; i++) {
@@ -28,7 +28,7 @@ public class Activ2 {
         /* Similar a toString, pero recorre todos los niveles, por eso puede imprimir Arrays_Arrays */
         System.out.println(Arrays.deepToString(matriz));
 
-         /* Llamadas */
+        /* Llamadas */
         sumaFilas(matriz);
         suma_CadaFila(matriz);
         sumaColumnas(matriz);
@@ -57,17 +57,17 @@ public class Activ2 {
         }
     }
 
-
     //Suma_Columnas
     public static void sumaColumnas(int[][] matriz) {
-        int ColumnaTotal = 0;
-        for (int i = 0; i < matriz[0].length; i++) { /* Si bien [0].length = columna, falla si las filas no l=. */
-            for (int j = 0; j < matriz[i].length; j++) {
-                ColumnaTotal += matriz[i][j];
+        int totalColumnas = 0;
+        for (int i = 0; i < matriz.length; i++) {          /* Con i, seleccion fil y de ella, sus columnas */
+            for (int j = 0; j < matriz[i].length; j++) {   
+                totalColumnas += matriz[i][j];
             }
         }
-        System.out.println("\nTotal_Columnas: " + ColumnaTotal);
+        System.out.println("\nTotal_Columnas: " + totalColumnas);
     }
+
     
     //Suma_x_Columna
     public static void suma_CadaColumna(int[][] matriz) {
