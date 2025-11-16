@@ -33,6 +33,8 @@ public class Pag9 {
             System.out.println();
         } 
         System.out.println();
+        AlumnosOk();
+        System.out.println();
         System.out.println("Enter, para continuar");
         System.out.println("-----------------------");
 
@@ -85,6 +87,24 @@ public class Pag9 {
         System.out.printf("Media: %.2f\n", media);
         System.out.printf("Máxima: %.2f\n", maxNota);
         System.out.printf("Mínima: %.2f\n", minNota);
+    }
+
+    //Funcion Impresora_AlumnosOk
+    public static void AlumnosOk() {
+        System.out.println("Han aprobado:");
+        //
+        for (int i = 0; i < alumnos.length; i++) {
+            boolean aprobado = false;
+            for (int j = 0; j < modulos.length; j++) {
+                double nota = notas[i][j];
+                if (nota >= 5) {
+                    aprobado = true;
+                }
+            }
+            if (aprobado) {
+            System.out.println(alumnos[i]);
+            }
+        }
     }
 
 }
