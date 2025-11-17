@@ -10,7 +10,7 @@ public class Activ9B {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        //Arrays semilla (datos iniciales que pide el enunciado)
+        //Arrays semilla, serán heredados 
         String[] modulosBase = { "Programación", "Entornos", "B.Datos", "Sistemas" };
         String[] alumnosBase = { "José", "Ana", "María", "Luis", "Domingo" };
 
@@ -43,7 +43,8 @@ public class Activ9B {
         System.out.println("--------------------------------------");
 
         int opcion = teclado.nextInt();
-        teclado.nextLine(); // limpiar buffer
+        //Limpiar buffer
+        teclado.nextLine(); 
 
         if (opcion == 1) {
             agregarAlumno(teclado, alumnos, modulos, notas);

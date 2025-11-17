@@ -10,7 +10,7 @@ public class Persona {
         this.nombre=nombre;
         this.edad=edad;
     }
-    public Persona(Persona p){
+    public Persona(Persona4 p){
         this.nombre=p.getNombre();
         this.edad=p.getEdad();
         this.estatura=p.getEstatura();
@@ -40,12 +40,12 @@ public class Persona {
         System.out.println("Te llamas "+nombre+", tienes "+edad+" años y mides "+estatura);
     }
     public static void main(String[] args) {
-        Persona p1=new Persona();
-        Persona p2=new Persona();
-        Persona p3=new Persona();
-        Persona p4=new Persona("Domingo",(byte)40);
-        Persona p5=new Persona(p4);
-        Persona p6; p6=p5;
+        Persona4 p1=new Persona4();
+        Persona4 p2=new Persona4();
+        Persona4 p3=new Persona4();
+        Persona4 p4=new Persona4("Domingo",(byte)40);
+        Persona4 p5=new Persona4(p4);
+        Persona4 p6; p6=p5;
         p4.setNombre("ÁLVARO");
         //Indicar los atributos con sus funciones
         p1.setNombre("Pepa");
