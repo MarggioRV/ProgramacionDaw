@@ -15,43 +15,73 @@ public class OchoReinasNoValido {
 // FIN_ALGORITMO
     
     static final char CAMINO = '0';
-    static final char PIEZA='#';
+    static final char PIEZA = '#';
+
     public static void main(String[] args) {
 
         //Tablero
         char[][] tablero = {
-            {'0', '#', '#', '0', '#'},
-            {'#', '0', '#', '#', '0'},
-            {'0', '#', '0', '#', '0'},
-            {'#', '0', '#', '0', '#'},
-            {'0', '#', '0', '#', '0'},
-            {'#', '0', '#', '0', '#'},
-            {'0', '#', '0', '#', '0'},
-            {'#', '0', '0', '#', '0'},
+            {'0', '#', '#', '0', '#', '0', '#', '0'},
+            {'#', '0', '#', '#', '0', '#', '0', '0'},
+            {'0', '#', '0', '0', '0', '0', '#', '#'},
+            {'#', '0', '#', '#', '#', '#', '0', '0'},
+            {'0', '#', '0', '#', '0', '#', '0', '0'},
+            {'#', '0', '#', '0', '#', '0', '#', '0'},
+            {'0', '#', '0', '#', '0', '0', '#', '#'},
+            {'#', '0', '0', '#', '0', '0', '#', '0'},
         };
 
         //Matriz solución
-         int[][] solucion = new int[tablero.length][tablero[0].length];
+        int[][] solucion = new int[tablero.length][tablero[0].length];
 
-         for (int i = 0; i < tablero.length; i++) {
+        //Mostrar 1era columna
+        for (int i = 0; i < tablero.length; i++) {
             char primeraColumna = tablero[i][0]; 
             System.out.println(primeraColumna);
         }
 
         Scanner teclado = new Scanner(System.in);
-        
-        //Viendo coordenadas
-        System.out.println("Elige: ");
-        int opcion1 = teclado.nextInt();
-        System.out.println("Elige: ");
-        int opcion2 = teclado.nextInt();
-        System.out.println("Elegiste : " + (tablero[opcion1-1][opcion2-1]));
-        System.out.println();
-        
-        //Leer 1era columna
-        System.out.println("Introduce calor de x: ");
-        System.out.println();
-        int primeraColumna = teclado.nextInt();
+
+        //Imprimir tablero inicial
+        impTablero(tablero);
+
+        //Viendo Coordenadas Validad
+        int xValor, yValor;
+        boolean valido;
+        do {
+            System.out.println();
+            System.out.println("Esc de x (fila 0-" + (tablero.length-1) + "): ");
+            xValor = teclado.nextInt();
+            System.out.println("Esc y (columna 0-" + (tablero[0].length-1) + "): ");
+            yValor = teclado.nextInt();
+
+            valido = !(xValor < 0 || xValor >= tablero.length ||
+                       yValor < 0 || yValor >= tablero[0].length ||
+                       tablero[xValor][yValor] != CAMINO);
+
+            if(!valido){
+                System.out.println("No es válida");
+            }
+        } while(!valido);
+
+        System.out.println("Elegiste : " + (tablero[xValor][yValor]) + " en ("+xValor+","+yValor+")");
+
+        //Intentar resolver desde coordenadas válidas
+        if(resolverDesde(xValor, yValor, tablero, solucion)){
+            System.out.println("Solución encontrada:");
+            System.out.println();
+            impSolucion(solucion);
+        } else {
+            System.out.println("No hay solución desde esas coordenadas.");
+        }
+
+        // //Leer 1era columna
+        // System.out.println();
+        // System.out.println("Esc valor de x: " );
+        // int fila = teclado.nextInt();
+        // System.out.println();
+        // System.out.println("E" + fila + ": " + tablero[fila][0]);
+        teclado.close();
     }
 
 
@@ -77,35 +107,70 @@ public class OchoReinasNoValido {
         int saltoIntermedioY = y + cambioY;
         int saltoDestinoX = x + 2 * cambioX;   
         int saltoDestinoY = y + 2 * cambioY;
-
         //Comprobando limites
-        if(saltoDestinoX < 0 || saltoDestinoX >= tablero.length || saltoDestinoY < 0 || saltoDestinoY >= tablero[0].length){
-        return false;
+        if(saltoDestinoX < 0 || saltoDestinoX >= tablero.length || 
+           saltoDestinoY < 0 || saltoDestinoY >= tablero[0].length){
+            return false;
         }
-
-        /* Hay salto, solo si el del medio es una pieza */
-        return tablero[saltoIntermedioX][saltoIntermedioY] == PIEZA && tablero[saltoDestinoX][saltoDestinoY] == '0';
+     /* Hay salto, solo si el del medio es una pieza */
+        return tablero[saltoIntermedioX][saltoIntermedioY] == PIEZA && tablero[saltoDestinoX][saltoDestinoY] == CAMINO;
     }
 
-     
-    //ResolverDesde
+    //ResolverDesde 
     public static boolean resolverDesde(int x, int y, char[][] tablero, int[][] solucion){
     
+        if(!esSeguro(x, y, tablero)) {
+            return false;
+        }
+
+        if(solucion[x][y] == 1){
+            return false;
+        }
+
+        solucion[x][y] = 1;
+
         if(noMeta(x, y, tablero, solucion)) {
             return true;
         }
 
-        if(esSeguro(x, y, tablero)) {
-            solucion[x][y] = 1;
+        //Movimientos normales
+        if(resolverDesde(x+1, y, tablero, solucion)) return true;
+        if(resolverDesde(x, y+1, tablero, solucion)) return true;
+        if(resolverDesde(x-1, y, tablero, solucion)) return true;
+        if(resolverDesde(x, y-1, tablero, solucion)) return true;
 
-            if(resolverDesde(x+1, y, tablero, solucion)) return true;
-            if(resolverDesde(x, y+1, tablero, solucion)) return true;
-            if(resolverDesde(x-1, y, tablero, solucion)) return true;
-            if(resolverDesde(x, y-1, tablero, solucion)) return true;
+        //Movimientos con salto
+        if(puedeSaltar(x, y, 1, 0, tablero) && resolverDesde(x+2, y, tablero, solucion)) return true;
+        if(puedeSaltar(x, y, 0, 1, tablero) && resolverDesde(x, y+2, tablero, solucion)) return true;
+        if(puedeSaltar(x, y, -1, 0, tablero) && resolverDesde(x-2, y, tablero, solucion)) return true;
+        if(puedeSaltar(x, y, 0, -1, tablero) && resolverDesde(x, y-2, tablero, solucion)) return true;
            
-            //Backtracking***
-            solucion[x][y] = 0; 
+        //Backtracking***
+        solucion[x][y] = 0; 
+        return false;
+    }
+    
+    //Funcion_ImpTablero
+    public static void impTablero(char[][] tablero){
+        System.out.println("Tablero:");
+        for(int i=0; i<tablero.length; i++){
+            for(int j=0; j<tablero[0].length; j++){
+                System.out.print(tablero[i][j]+" ");
+            }
+            System.out.println();
         }
-    return false;
+    }
+    
+    //Funcion_ImpSolucion
+    public static void impSolucion(int[][] solucion){
+        System.out.println("Solución:");
+        for(int i=0; i<solucion.length; i++){
+            for(int j=0; j<solucion[0].length; j++){
+                System.out.print(solucion[i][j]+" ");
+            }
+            System.out.println();
+        }
     }
 }
+
+
