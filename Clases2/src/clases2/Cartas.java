@@ -1,4 +1,4 @@
-package clases;
+package clases2;
 
 public class Cartas {
     int valor;

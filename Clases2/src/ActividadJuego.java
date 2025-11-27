@@ -1,6 +1,4 @@
-import clases.Juego;
-import clases.Jugador;
-
+import clases2.*;
 
 public class ActividadJuego {
     //Incializacion de todo el codigo del juego

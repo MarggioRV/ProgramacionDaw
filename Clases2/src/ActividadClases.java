@@ -1,5 +1,5 @@
 
-import clases.*;
+import clases2.*;
 
 public class ActividadClases {
     public static void main(String[] args) {
