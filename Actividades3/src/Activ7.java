@@ -33,7 +33,7 @@ public class Activ7 {
         System.out.println();
         
         /* Contador para la enumaracion */
-        System.out.println(nombres.toString());/* Es ligeramente diferente a con las Matrices */
+        System.out.println(nombres.toString());
         
         /* Contador para la enumaracion */
         int contador = 1;

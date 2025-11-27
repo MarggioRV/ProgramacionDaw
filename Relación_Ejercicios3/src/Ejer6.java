@@ -8,11 +8,13 @@ public class Ejer6 {
         //Declaración_matrices 
 
         double[][] matriz1 = {
-            {1, 2, 3}, {4, 5, 6}
+            {1, 2, 3}, 
+            {4, 5, 6}
         };
 
         double[][] matriz2 = {
-            {7, 8, 9}, {10, 11, 12}
+            {7, 8, 9}, 
+            {10, 11, 12}
         };
 
         //Obtener calculo_filas
