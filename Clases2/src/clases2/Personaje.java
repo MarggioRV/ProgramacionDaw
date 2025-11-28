@@ -1,17 +1,17 @@
 package clases2;
 
 public class Personaje {
-    String Tipo_Ataque;
-    String nombre;
-    int vida;
-    Tipo tipo;
-    int defensa;
+    private int ataque; //Tipo_Ataque
+    private String nombre;
+    private int vida;
+    private Tipo tipo;
+    private int defensa;
 
-    enum Tipo {Heroe, Mago, Orco}
+    enum Tipo {Caballero, Mago, Orco}
     
     //Constructor
-    public Personaje(String tipo_Ataque, String nombre, int vida, Tipo tipo, int defensa) {
-        Tipo_Ataque = tipo_Ataque;
+    public Personaje(int ataque, String nombre, int vida, Tipo tipo, int defensa) {
+        this.ataque = ataque;
         this.nombre = nombre;
         this.vida = vida;
         this.tipo = tipo;
@@ -20,12 +20,12 @@ public class Personaje {
     
     //Getters y Setters
 
-    public String getTipo_Ataque() {
-        return Tipo_Ataque;
+    public int getAtaque() {
+        return ataque;
     }
 
-    public void setTipo_Ataque(String tipo_Ataque) {
-        Tipo_Ataque = tipo_Ataque;
+    public void setAtaque(int ataque) {
+        this.ataque = ataque;
     }
 
     public String getNombre() {
@@ -63,12 +63,12 @@ public class Personaje {
     //Metodos Propios
 
     //FuncionOkVida
-    Boolean estaVivo(int vida) {
-        return this.vida > 0;
+    Boolean estaVivo() {
+        return vida > 0;
     }
 
     //Funcion CalcDaño
-    public void CalcDaño(int daño){
+    public void calcDaño(int daño){
         int dañoFinal = daño - this.defensa;
         if (dañoFinal > 0) {
             this.vida -= dañoFinal;
