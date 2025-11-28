@@ -96,13 +96,13 @@ public class Batalla {
 
 
     //EstructuraLista
-    private void comoVerLista(String titulo, ArrayList<Personaje> lista) {
+    private void comoVerLista(String titulo, ArrayList<Personaje> personajes) {
         System.out.println("--- " + titulo + " ---");
-        if (lista.isEmpty()) {
+        if (personajes.isEmpty()) {
             System.out.println("No hay " + titulo.toLowerCase() + ".");
         } else {
-            //lista.forEach(System.out::println); en este caso mejor un for each
-            for (Personaje p : lista) {
+            //lista.forEach(System.out::println); 
+            for (Personaje p  : personajes) {
                 System.out.println(p);
             }
         }
