@@ -9,6 +9,8 @@ public class Batalla {
     //Atributos
     private ArrayList<Personaje> heroes;
     private ArrayList<Personaje> orcos;
+    private int victoriasOrcos; //!!
+    private boolean meta; //!!
     
     //Constructor_Defecto
     public Batalla() {
@@ -23,45 +25,78 @@ public class Batalla {
         
             
         int opcion = 0;
+        boolean meta = false; //Aquí: Mejor Control
         do {
-        System.out.println("==============================");
-        System.out.println("Elige tu personaje");
-        System.out.println();
-        System.out.println("1. Caballero");
-        System.out.println("2. Mago");
-        System.out.println("3. Orco");
-        System.out.println("==============================");
-        System.out.print("Agrega personajes con los indices, o -1 para iniciar: ");
-        //Entrasa-Datos
-        opcion=teclado.nextInt();
-        teclado.nextLine();
-        //Variable Opcion y sub-Llamadas (Aplicando Lambda)
-        switch (opcion) {
-            case -1 -> iniciarBatalla(); 
-            case 1 -> {
-                crearPersonaje(Tipo.Caballero);  
-                mostrarListas();
+            System.out.println("==============================");
+            System.out.println("Elige tu personaje");
+            System.out.println();
+            System.out.println("1. Caballero");
+            System.out.println("2. Mago");
+            System.out.println("3. Orco");
+            System.out.println("==============================");
+            System.out.print("Agrega personajes con los indices, o -1 para iniciar: ");
+            System.out.println();
+            //Entrasa-Datos
+            opcion=teclado.nextInt();
+            teclado.nextLine();
+            //Variable Opcion y sub-Llamadas (Aplicando Lambda)
+            switch (opcion) {
+                case -1 -> iniciarBatalla(); 
+                case 1 -> {
+                    crearPersonaje(Tipo.Caballero);  
+                    mostrarListas();
+                }
+                case 2 -> {
+                    crearPersonaje(Tipo.Mago);
+                    mostrarListas();
+                }
+                case 3 -> {
+                    crearPersonaje(Tipo.Orco); 
+                    mostrarListas();
+                }
+                default -> System.out.println("Opción no válida.");
             }
-            case 2 -> {
-                crearPersonaje(Tipo.Mago);
-                mostrarListas();
-            }
-            case 3 -> {
-                crearPersonaje(Tipo.Orco); 
-                mostrarListas();
-            }
-            default -> System.out.println("Opción no válida.");
-        }
-        } while (opcion != 0); 
+        } while (!meta); //Aqui tambien
     }
 
     //Funcion mostrar Resultado usando stream (Entuba elementos)
-    public void mostrarResultado(ArrayList<Personaje> heroe, ArrayList<Personaje> mago, ArrayList<Personaje> orco){
+    public void mostrarResultado(){ //Aquí re-cambio
         
-        //SMS: Muertos
-        heroe.forEach(System.out::println);
-        mago.forEach(System.out::println);
-        orco.forEach(System.out::println);
+        //SMS: Muertos Usanndo Stream
+        System.out.println();
+        System.out.println("--- HÉROES ---");
+        heroes.forEach(System.out::println);
+        imprimirMuertos(heroes);
+        System.out.println();
+
+        System.out.println();
+        System.out.println("--- Orcos ---");
+        imprimirMuertos(orcos);
+        orcos.forEach(System.out::println);
+        System.out.println();
+        
+        //Disyunciones
+        if (heroes.isEmpty() && orcos.isEmpty()) {
+            System.out.println("Empate");
+            System.out.println();
+            
+        } else if (orcos.isEmpty()) {
+            System.out.println("¡Los héroes ganaron!");
+            System.out.println();
+           
+        } else if (heroes.isEmpty()) {
+            System.out.println("Los orcos ganaron..");
+            System.out.println();
+
+        }
+    }
+
+    //Aquí: Nuevo!!
+    //Función variable para llenar los muertos, es decir, sino hay nada: No se imprimen
+    private void imprimirMuertos(ArrayList<?> lista) {
+        if (lista.isEmpty()) {
+            System.out.println("Muertosss");
+        }
     }
 
     //Crear Personaje
@@ -69,9 +104,9 @@ public class Batalla {
         Scanner teclado = new Scanner(System.in);
 
         System.out.print("Introduce nombre del " + tipo + ": ");
-         String nombre = teclado.nextLine();
+        String nombre = teclado.nextLine();
 
-         System.out.print("Vida: ");
+        System.out.print("Vida: ");
         int vida = teclado.nextInt();
 
         System.out.print("Defensa: ");
@@ -95,19 +130,18 @@ public class Batalla {
     }
 
 
-    //EstructuraLista
+    //Func.Aux, comoVerLista
     private void comoVerLista(String titulo, ArrayList<Personaje> personajes) {
         System.out.println("--- " + titulo + " ---");
         if (personajes.isEmpty()) {
             System.out.println("No hay " + titulo.toLowerCase() + ".");
         } else {
-            //lista.forEach(System.out::println); 
-            for (Personaje p  : personajes) {
-                System.out.println(p);
-            }
+            personajes.stream().forEach(System.out::println); //Aquí: Switch
+            // for (Personaje p  : personajes) {
+            //     System.out.println(p);
         }
     }
-
+    
     //MostrarLista
     private void mostrarListas() {
         comoVerLista("Héroes/Magos", heroes);
@@ -117,39 +151,64 @@ public class Batalla {
     //IniciarBatalla
     public void iniciarBatalla() {
         do {
-            //#Ramdon por clase directa
+            //Ramdon por clase directa
             Random rand = new Random();
             
-            //Seleccion de heroes
+            //Seleccion de heroes y Orcos
             Personaje heroeElegido = heroes.get(rand.nextInt(heroes.size()));
             Personaje orcoElegido = orcos.get(rand.nextInt(orcos.size()));
             
             //Confirmacion X Impresion
             System.out.println(heroeElegido + " vs " + orcoElegido);
+            
+            //AtackSilmutaneo
 
             //Daño
             //Ambos atacan a la vez usando calcDaño
             orcoElegido.calcDaño(heroeElegido.getAtaque());
             heroeElegido.calcDaño(orcoElegido.getAtaque());
 
-            //AtackSilmutaneo
+            //Gestion_Ataque
             
             //Heores
             if (!heroeElegido.estaVivo()){
                 System.out.println(heroeElegido.getNombre());
+                heroes.remove(heroeElegido);
             }
             System.out.println(heroeElegido);
-            heroes.remove(heroeElegido);
+            //heroes.remove(heroeElegido);
             
             //Orcos
             if (!orcoElegido.estaVivo()){
                 System.out.println(orcoElegido.getNombre());
+                orcos.remove(orcoElegido);
             }
             System.out.println(orcoElegido);
-            orcos.remove(orcoElegido);
+             contarVictoriaOrcos(); 
+            // orcos.remove(orcoElegido);
         
         } while (!heroes.isEmpty() && !orcos.isEmpty());
+        System.out.println();
+        System.out.println("---------------------------");
         System.out.println("La batalla ha terminado");
+        mostrarResultado();  //Aquí Tambien!!!
+
+    }
+
+    //Boolean respecto contar victorias de Orcos
+    private boolean contarVictoriaOrcos() {
+        victoriasOrcos++;
+        System.out.println("Los orcos llevan " + victoriasOrcos + " victorias seguidas.");
+    
+        if (victoriasOrcos >= 5) {
+            System.out.println("¡Los orcos han ganado 5 veces seguidas!");
+            meta = true; 
+            return true;
+        }
+        return false;
     }
 }
+
+
+
  

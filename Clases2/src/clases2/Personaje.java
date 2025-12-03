@@ -60,7 +60,17 @@ public class Personaje {
         this.defensa = defensa;
     }
     
-    //Metodos Propios
+    // //Metodos Propios
+    // @Override
+    // public String toString() {
+    //     return "Personaje [ataque=" + ataque + ", nombre=" + nombre + ", vida=" + vida + ", tipo=" + tipo + ", defensa="
+    //             + defensa + "]";
+    // }
+
+    @Override
+    public String toString() {
+        return nombre + " (" + tipo + ") | Vida: " + vida + ", Ataque: " + ataque + ", Defensa: " + defensa;
+    }
 
     //FuncionOkVida
     Boolean estaVivo() {
