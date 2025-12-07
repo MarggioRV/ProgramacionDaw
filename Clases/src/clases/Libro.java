@@ -1,4 +1,4 @@
-package Clases;
+package clases;
 public class Libro {
     //Atributos
     private String ISBN;
