@@ -1,10 +1,8 @@
 package actividadesClases;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-import actividadesClases.Personaje.Tipo;
-
-
 public class Batalla {
     //Atributos
     private ArrayList<Personaje> heroes;
