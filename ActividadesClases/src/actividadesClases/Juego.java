@@ -3,23 +3,23 @@ import java.util.Scanner;
 
 
 public class Juego {
-    Mazo_Cartas mazo;
+    MazoCartas mazo;
     Jugador jugador;
     private Scanner teclado = new Scanner(System.in); //Esto es para evitar errores de cierre
 
     //Constructor
     public Juego(Jugador jugador){ //Se inyecta desde fuera, sino, hay un jugador interno
-        this.mazo = new Mazo_Cartas();
+        this.mazo = new MazoCartas();
         this.jugador = jugador; 
     }
     
     //Getters y Setters
 
-    public Mazo_Cartas getMazo() {
+    public MazoCartas getMazo() {
         return mazo;
     }
 
-    public void setMazo(Mazo_Cartas mazo) {
+    public void setMazo(MazoCartas mazo) {
         this.mazo = mazo;
     }
 

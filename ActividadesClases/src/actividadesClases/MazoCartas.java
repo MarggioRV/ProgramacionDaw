@@ -2,30 +2,46 @@ package actividadesClases;
 import java.util.Collections;
 import java.util.ArrayList;
 
-public class Mazo_Cartas {
+public class MazoCartas {
     private ArrayList<Cartas> mazo;
 
-    //Constructor
-    public Mazo_Cartas(){
-        this.mazo = new ArrayList<Cartas>();
+    //Constructor con llamada para llenar
+    public MazoCartas() {
+        mazo = new ArrayList<>();
+        llenarMazo();
     }
 
-    //Funcion para llenar mazo con cartas españolas
+    //Función para llenar el mazo
     public void llenarMazo() {
-        String[] palos = {"Oros", "Copas", "Espadas", "Bastos"};
+        
+        //Limpiador
+        mazo.clear(); 
+
+        //Baraja española
+        String[] palos = {"Espadas", "Copas", "Bastos", "Oros"};
+
         for (String palo : palos) {
-            for (int valor = 1; valor <= 12; valor++) {
-                if (valor != 8 && valor != 9) { //Por la baraja Española
-                    Cartas carta = new Cartas();
-                    carta.setPalo(palo);
-                    carta.setValor(valor);
-                    mazo.add(carta);
-                }
+            for (int i = 1; i <= 13; i++) {
+                mazo.add(new Cartas(i, palo));
             }
         }
     }
 
+    //Constructor con el mazo ya lleno
+    // public MazoCartas(){
+    //     mazo = new ArrayList<>();
+    //     //Baraja española
+    //     String[] palos = {"Espadas", "Copas", "Bastos", "Oros"};
+    //     for (String palo : palos) {
+    //         for (int i = 1; i <= 13; i++) {
+    //             mazo.add(new Cartas(i, palo));
+    //         }
+    //     }
+    //     //Nota: Se puede incluir barajar
+    // }
+
     //Getters y Setters
+
     public ArrayList<Cartas> getMazo() {
         return mazo;
     }
@@ -51,7 +67,7 @@ public class Mazo_Cartas {
     //     this.mazo = mazoBarajado;
     // }
 
-    //Fucion barajar cartas del mazo usando Collections.shuffle
+    //Fucion para barajar usando Collections.shuffle
     public void barajar() {
         Collections.shuffle(this.mazo);
     }

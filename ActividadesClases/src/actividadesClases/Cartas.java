@@ -1,10 +1,21 @@
 package actividadesClases;
 
 public class Cartas {
+
+    //Atributos
+
     int valor;
     String palo;
 
-    
+    //Constructor
+
+    public Cartas(int valor, String palo) {
+        this.valor = valor;
+        this.palo = palo;
+    }
+
+    //Getters y Setters
+
     public int getValor() {
         return valor;
     }
@@ -20,7 +31,22 @@ public class Cartas {
 
 
     @Override
+    // public String toString() {
+    //     return "Cartas [valor=" + valor + ", palo=" + palo + "]";
+    // }
     public String toString() {
-        return "Cartas [valor=" + valor + ", palo=" + palo + "]";
+        String nombreValor;
+        switch (valor) {
+            case 1: nombreValor = "As"; 
+                    break;
+            case 11: nombreValor = "Sota"; 
+                    break;
+            case 12: nombreValor = "Caballo"; 
+                    break;
+            case 13: nombreValor = "Rey"; 
+                    break;
+            default: nombreValor = String.valueOf(valor);
+        }
+        return nombreValor + " de " + palo;
     }
 }
