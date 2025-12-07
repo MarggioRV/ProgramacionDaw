@@ -1,4 +1,3 @@
-package actividadesClases;
 import actividadesClases.Especialidad;
 import actividadesClases.Locomotora;
 import actividadesClases.Maquinista;

@@ -1,3 +1,4 @@
+package actividadesClases;
 public class Vagon {
     int numero;
     double cargaMax, cargaActual;
