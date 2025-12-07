@@ -8,8 +8,8 @@ public class Persona {
     Boolean estadoCivil;
 
     public Persona(){
-
     }
+    
     public Persona(String nombre, String DNI, String fecha, String direccion, Boolean genero,Boolean estado){
         this.nombre=nombre;
         this.DNI=DNI;

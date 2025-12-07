@@ -11,7 +11,6 @@ public class Pieza {
 
     //Constructores
     public Pieza(){
-
     }
     
     public Pieza(int codigo, String nombre, String color, double precio){
