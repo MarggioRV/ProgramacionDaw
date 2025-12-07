@@ -1,5 +1,5 @@
 package actividadesClases;
-
+//N:M
 public class ProveedorSuministraPieza {
     Pieza pieza;
     Proveedor proveedor;

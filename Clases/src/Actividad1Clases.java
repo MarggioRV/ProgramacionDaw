@@ -1,9 +1,9 @@
 import prueba.Matematicas;
-import prueba.Persona;
+import prueba.Persona0;
 
 public class Actividad1Clases {
     public static void main(String[] args) {
-        Persona p = new Persona("Domingo",40);
+        Persona0 p = new Persona0("Domingo",40);
         p.imprimePersona();
 
         double a=4;
@@ -11,6 +11,6 @@ public class Actividad1Clases {
 
         System.out.println(Matematicas.suma(a,b));
 
-        System.out.println(Matematicas.resta(a,b));
+        System.out.println(p.getNombre());
     }   
 }

@@ -1,9 +1,9 @@
 package Clases;
 
 public class Cuenta {
-    String numeroCuenta;
-    double saldo;
-    Persona cliente;
+    private String numeroCuenta;
+    private double saldo;
+    private Persona cliente;
 
     public Cuenta(){
 
@@ -14,7 +14,31 @@ public class Cuenta {
         this.cliente=p;
     }
 
-    //get y set
+    //Getters y Setters
+
+    public String getNumeroCuenta() {
+        return numeroCuenta;
+    }
+
+    public void setNumeroCuenta(String numeroCuenta) {
+        this.numeroCuenta = numeroCuenta;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public Persona getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Persona cliente) {
+        this.cliente = cliente;
+    }
 
     public void imprimeCuenta(){
         System.out.println("Número de cuenta bancaria: "+this.numeroCuenta);
