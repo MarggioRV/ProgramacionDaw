@@ -3,7 +3,7 @@ import actividadesClases.*;;
 public class ActividadBiblioteca {
     public static void main(String[] args) throws Exception { //Indica que esto puede lanzar una excepción
 
-        Biblioteca bib=new Biblioteca("Gallardos Municipalidad");
+        Biblioteca bib=new Biblioteca("GallardosMunicipalidad");
 
         Libro2 l1=new Libro2("Viaje al centro de la Tierra","Aventuras",2);
         Libro2 l2=new Libro2("Harry Potter","Fantacia",5);

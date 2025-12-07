@@ -1,5 +1,6 @@
 package actividadesClases;
 public class Publica {
+
     Sucursal sucursal=null;
     Revista revista=null;
 
@@ -9,6 +10,7 @@ public class Publica {
         this.sucursal = sucursal;
         this.revista = revista;
     }
+    
     public Revista getRevista() {
         return revista;
     }

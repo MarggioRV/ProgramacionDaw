@@ -1,8 +1,16 @@
 package actividadesClases;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Sucursal {
-    int codigo;
-    String direccion, telefono, ciudad, provincia;
+
+    //Atributos
+
+    private int codigo;
+    private String direccion, telefono, ciudad, provincia;
+
+    //Constructores
 
     public Sucursal(){}
 
@@ -13,6 +21,8 @@ public class Sucursal {
         this.ciudad = ciudad;
         this.provincia = provincia;
     }
+
+    //Getters y Setters
 
     public int getCodigo() {
         return codigo;
@@ -60,4 +70,26 @@ public class Sucursal {
                 + ciudad + ", provincia=" + provincia + "]";
     }
     
+    //Metodos
+
+    //Func para filtrar vueelos de la surcusal por su clase
+    public void VuelosClase(ArrayList<Toma> tomas) {
+        for (int i = 0; i < tomas.size(); i++) {
+            Toma t = tomas.get(i);
+
+            if (t.getSucursal().equals(this)) {
+                Toma.ClaseVuelo claseActual = t.getClase();
+
+                System.out.print("Los vuelos ofrecidos por la sucursal " + this.getCodigo() + ", de clase " + claseActual + ", son: ");
+
+                for (int j = 0; j < tomas.size(); j++) {
+                    Toma otra = tomas.get(j);
+                    if (otra.getSucursal().equals(this) && otra.getClase() == claseActual) {
+                        System.out.print(otra.getVuelo() + " ");
+                    }
+                }
+                System.out.println();
+            }
+        }
+    }
 }

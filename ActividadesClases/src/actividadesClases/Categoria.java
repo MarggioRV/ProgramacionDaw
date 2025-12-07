@@ -1,6 +1,8 @@
 package actividadesClases;
 
 public class Categoria {
+
+    //Atributos
     private int codigo;
     private String nombre;
     
