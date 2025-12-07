@@ -5,17 +5,14 @@ import actividadesClases.ProveedorSuministraPieza;
 
 public class ActividadProveedores {
     public static void main(String[] args) {
-        
         //Crear CATEGORIA
-        Categoria cat=new Categoria(1,"piezaX");
+        Categoria cat=new Categoria(1,"pieza1");
         System.out.println(cat.toString());
-        
         //Crear proveedor
-        Proveedor prove=new Proveedor(1,"Almeria","12_olivares","Vera");
+        Proveedor prove=new Proveedor(1,"asdfadsfsdf","Huércal Overa","Almería");
         System.out.println(prove.toString());
-        
         //Crear la pieza
-        Pieza pieza = new Pieza(1,"Bateria","naranja",15.00);
+        Pieza pieza = new Pieza(1,"Alicates","AMARILLO",23.99);
         pieza.setCat(cat);
         System.out.println(pieza.toString());
 
