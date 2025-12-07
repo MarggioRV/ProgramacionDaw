@@ -1,4 +1,4 @@
-package actividadesClases;
+package clases2;
 
 public class Categoria {
     private int codigo;

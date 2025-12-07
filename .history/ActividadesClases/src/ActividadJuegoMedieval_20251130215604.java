@@ -1,4 +1,4 @@
-import actividadesClases.Batalla;
+import clases2.*;
 
 public class ActividadJuegoMedieval {
     public static void main(String[] args) {

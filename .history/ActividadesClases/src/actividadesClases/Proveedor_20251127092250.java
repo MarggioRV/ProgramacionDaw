@@ -1,4 +1,5 @@
-package actividadesClases;
+package clases2;
+
 public class Proveedor {
     private int codigo;
     private String provincia;

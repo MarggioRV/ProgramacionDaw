@@ -1,6 +1,6 @@
-package actividadesClases;
+package clases2;
 
-public class Persona2 {
+public class Persona {
     private String nombre; 
     private String cedula;
     private String apellido;
@@ -10,10 +10,10 @@ public class Persona2 {
     private Ciudad nacimiento; //Clave Foranea
 
 	//Constructor Por Defecto
-    public Persona2(){ 
+    public Persona(){ 
     }
 
-    public Persona2(String nombre, String cedula, String apellido, char genero){
+    public Persona(String nombre, String cedula, String apellido, char genero){
         this.nombre=nombre;
         this.cedula=cedula;
         this.apellido=apellido;
@@ -21,7 +21,7 @@ public class Persona2 {
     }
     
     //Constructor x Copia
-    public Persona2(Persona p){
+    public Persona(Persona p){
         this.nombre=p.getNombre();
         this.apellido=p.getApellido();
         this.cedula=p.getCedula();

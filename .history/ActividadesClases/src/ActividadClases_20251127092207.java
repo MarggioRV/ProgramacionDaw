@@ -1,6 +1,5 @@
-import actividadesClases.Ciudad;
-import actividadesClases.Fecha;
-import actividadesClases.Persona;
+
+import clases2.*;
 
 public class ActividadClases {
     public static void main(String[] args) {

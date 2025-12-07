@@ -1,4 +1,4 @@
-package actividadesClases;
+package clases2;
 
 enum Color{
     ROJO, VERDE, AZUL, AMARILLO, VIOLETA;

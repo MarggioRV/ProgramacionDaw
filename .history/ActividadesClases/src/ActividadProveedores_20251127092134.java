@@ -1,8 +1,4 @@
-import actividadesClases.Categoria;
-import actividadesClases.Pieza;
-import actividadesClases.Proveedor;
-import actividadesClases.ProveedorSuministraPieza;
-
+import clases2.*;
 public class ActividadProveedores {
     public static void main(String[] args) {
         //Crear CATEGORIA
