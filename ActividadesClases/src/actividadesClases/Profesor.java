@@ -53,5 +53,14 @@ public class Profesor {
         return "Profesor [DNI=" + DNI + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono
                 + "]";
     }
+
+    //Metodos
+
+    //Función para cambiar info_contacto
+    public void cambiarContactos(String nuevoTfno, String nuevaDireccion) {
+        this.telefono = nuevoTfno;
+        this.direccion = nuevaDireccion;
+        System.out.println("Infor_Contacto actualizada: Teléfono=" + telefono + ", Dirección=" + direccion);
+    }
     
 }
