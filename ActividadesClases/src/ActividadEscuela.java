@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import actividadesClases.*;
 public class ActividadEscuela {
+    //Incializacion
     public static void main(String[] args) {
         //Crear profesor
         Profesor prof1 = new Profesor(12345678, "Juan Pérez", "Calle Mayor 10", "600123456");
