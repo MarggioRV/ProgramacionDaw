@@ -7,7 +7,7 @@ public class Pieza {
     private String nombre;
     private String color;
     private double precio;
-    private Categoria cat;
+    private Categoria cat; //Clave Foranea
 
     //Constructores
     public Pieza(){
