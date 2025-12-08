@@ -3,15 +3,14 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import actividadesClases.*;
-
 public class ActividadEscuela {
     public static void main(String[] args) {
-        // Crear profesor
+        //Crear profesor
         Profesor prof1 = new Profesor(12345678, "Juan Pérez", "Calle Mayor 10", "600123456");
         Profesor prof2 = new Profesor(12345678, "Romon Valdez", "Calle Menor 20", "656343456");
         System.out.println("Profesor inicial: " + prof1);
 
-        // Cambiar teléfono y dirección del profesor
+        //Cambiar teléfono y dirección
         prof1.cambiarContactos("62223456", "Calle Medio 20");
         System.out.println("Profesor actualizado: " + prof1);
 
@@ -22,7 +21,7 @@ public class ActividadEscuela {
 
         //LLamadas1
 
-        a1.cambiarDelegado(a2); 
+        a1.cambiarDelegado(a2); //Gohan delega ahora
 
         System.out.println(a1);
         System.out.println(a2);
@@ -38,7 +37,7 @@ public class ActividadEscuela {
         cursas.add(new Cursa(a2, m1));
         cursas.add(new Cursa(a3, m2));
 
-        // Mostrar las matrículas
+        //Mostrar las matrículas
         System.out.println("\n--- Matrículas ---");
         for (Cursa c : cursas) {
             System.out.println(c);
