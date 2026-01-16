@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ca82536-8c99-456b-b9b0-779942c02e3c" name="Changes" comment="" />
+    <list default="true" id="5ca82536-8c99-456b-b9b0-779942c02e3c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/ActividadesClases/src/Actividad1Clase.java" beforeDir="false" afterPath="$PROJECT_DIR$/ActividadesClases/src/Actividad1Clase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agenda/src/Agenda2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Agenda/src/Agenda2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agenda/src/Persona4.java" beforeDir="false" afterPath="$PROJECT_DIR$/Agenda/src/Persona4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clases/src/Actividad1Clases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/src/Actividad1Clases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clases/src/Actividad3Clases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/src/Actividad3Clases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clases/src/ActividadClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/src/ActividadClases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clases/src/Didactica/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/src/Didactica/Alumno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clases/src/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/src/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clases/src/Persona2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/src/Persona2.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

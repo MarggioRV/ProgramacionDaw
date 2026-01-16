@@ -1,7 +1,5 @@
-package Clases.src;
-
-import Clases.src.clases.Editorial;
-import Clases.src.clases.Libro;
+import clases.Editorial;
+import clases.Libro;
 
 public class Actividad3Clases {
     public static void main(String[] args) {

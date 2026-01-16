@@ -1,4 +1,4 @@
-package Clases.src;
+// package Clases.src;
 public class Persona {
     String nombre; //Atributos por defecto public
     byte edad;
