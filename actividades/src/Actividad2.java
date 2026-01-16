@@ -1,4 +1,4 @@
-package Actividades.src;
+
 //Pag 14, activ 1
 /* Actividad: Haz el programa JAVA del siguiente diagrama de flujo */
 
