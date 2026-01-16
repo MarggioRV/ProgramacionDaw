@@ -1,4 +1,4 @@
-package Agenda.src;
+/*package Agenda.src;
 public class Agenda {
     public static void main(String[] args) {
         //Necesito tener un Vector_Personas
@@ -6,8 +6,8 @@ public class Agenda {
         lista[0]=new Persona4();
         //Imprimir las personas
         for(int i=0;i<lista.length;i++){
-            lista[i].imprimePersona()
+            lista[i].imprimePersona();
         }
         
     }
-}
+}*/
