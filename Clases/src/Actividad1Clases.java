@@ -1,7 +1,7 @@
 package Clases.src;
 
-import prueba.Matematicas;
-import prueba.Persona0;
+import Clases.src.prueba.Matematicas;
+import Clases.src.prueba.Persona0;
 
 public class Actividad1Clases {
     public static void main(String[] args) {
