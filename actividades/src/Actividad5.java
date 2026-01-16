@@ -1,3 +1,4 @@
+package Actividades.src;
 //Pag 19, Actvs 1. Tabla de Multiplacar incremental y bucle hasta 10 
  public class Actividad5 {
     public static void main(String[] args) {

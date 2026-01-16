@@ -5,16 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ca82536-8c99-456b-b9b0-779942c02e3c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.history/Tema5/src/App_20251216115730.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/Tema5/src/App_20251216122050.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Actividades2/src/Prueba2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ProgramacionDaw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProgramacionDaw.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actividades/src/Actividad2.java" beforeDir="false" afterPath="$PROJECT_DIR$/actividades/src/Actividad2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Actividades2/Matrices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Actividades2/src/Matrices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Actividades2/practica1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Actividades2/src/practica1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agenda/src/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/Agenda/src/Agenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agenda/src/Agenda2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Agenda/src/Agenda2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agenda/src/Persona4.java" beforeDir="false" afterPath="$PROJECT_DIR$/Agenda/src/Persona4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pag17.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,29 +39,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Actividad2.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Actividad2.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marggio\Documents\Repositorios\ProgramacionDaw\Actividades2\src" />
+      <recent name="C:\Users\Marggio\Documents\Repositorios\ProgramacionDaw\Actividades2" />
       <recent name="C:\Users\Marggio\Documents\Repositorios\ProgramacionDaw\ActividadesClases\src" />
       <recent name="C:\Users\Marggio\Documents\Repositorios\ProgramacionDaw\ActividadesClases\src\actividadesClases" />
     </key>

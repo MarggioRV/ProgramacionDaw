@@ -1,4 +1,4 @@
-package Actividades2;
+package Actividades2.src;
 
 public class practica1 {
     public static void main(String[] args) {

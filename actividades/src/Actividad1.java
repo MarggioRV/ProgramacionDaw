@@ -1,4 +1,12 @@
-public class Actividad1 {
+package Actividades.src;
+
+public class Prueba {
+    public class HolaMundo {
+    public static void main(String[] args) {
+        System.out.println("¡Hola, Mundo!"); // Muestra el mensaje en la consola
+    }
+} 
+}public class Actividad1 {
     public static void main(String[] args) throws Exception {
         //Actividad, tema 2, diapositiva 9
         //Realiza un programa que genera dos números aleatorios y devuelva el cociente....

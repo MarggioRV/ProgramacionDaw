@@ -1,3 +1,4 @@
+package Actividades.src;
 //Pag 22, Actv 1.
 
 /* Calcular el máximo de 3 números si existe la función maximo(a,b).

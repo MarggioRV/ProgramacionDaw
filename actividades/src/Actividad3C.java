@@ -1,3 +1,4 @@
+package Actividades.src;
 
 import java.util.Scanner;
 public class Actividad3C {

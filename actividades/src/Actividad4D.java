@@ -1,3 +1,4 @@
+package Actividades.src;
 import java.util.Scanner;
 //Pag 17, Actvs 7, part 2
 public class Actividad4D {

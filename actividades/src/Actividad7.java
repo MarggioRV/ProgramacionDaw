@@ -1,3 +1,4 @@
+package Actividades.src;
 
 import java.util.Scanner;
 //Pag 24, Actividad 1: 

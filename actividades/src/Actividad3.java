@@ -1,3 +1,4 @@
+package Actividades.src;
 public class Actividad3 {
 //Pag 16, Actvs 1. N* Entre 50 y 200 los múltiplos de 2 y 3
     public static void main(String[] args) {

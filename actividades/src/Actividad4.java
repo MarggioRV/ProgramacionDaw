@@ -1,3 +1,4 @@
+package Actividades.src;
 import java.util.Scanner;
 
 //Adivina el número, pag 17, actv 5

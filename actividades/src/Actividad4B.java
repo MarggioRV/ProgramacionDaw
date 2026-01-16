@@ -1,3 +1,4 @@
+package Actividades.src;
 
 import java.util.Scanner;
 //Pag 17, Actvs 6
