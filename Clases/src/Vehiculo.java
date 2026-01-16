@@ -1,3 +1,4 @@
+package Clases.src;
 public class Vehiculo {
     //Datos mienbros de la clase
     boolean usedFlag;

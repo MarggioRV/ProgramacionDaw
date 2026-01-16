@@ -1,5 +1,4 @@
-package clases;
-
+package Clases.src.clases;
 public class Cuenta {
     private String numeroCuenta;
     private double saldo;

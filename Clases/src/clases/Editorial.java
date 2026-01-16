@@ -1,4 +1,4 @@
-package clases;
+package Clases.src.clases;
 public class Editorial {
     //Atributos
     private int codigo;
