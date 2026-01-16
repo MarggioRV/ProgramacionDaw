@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ca82536-8c99-456b-b9b0-779942c02e3c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ActividadesClases/src/actividadesClases/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/ActividadesClases/src/actividadesClases/Persona2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/Tema5/src/App_20251216115730.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/Tema5/src/App_20251216122050.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ProgramacionDaw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProgramacionDaw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actividades/src/Actividad2.java" beforeDir="false" afterPath="$PROJECT_DIR$/actividades/src/Actividad2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +19,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="36UekNvwAvBZyLqC5pklwNu75rt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,6 +29,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Actividad2.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -38,21 +43,21 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Marggio\Documents\Repositorios\ProgramacionDaw\ActividadesClases\src\actividadesClases" />
       <recent name="C:\Users\Marggio\Documents\Repositorios\ProgramacionDaw\ActividadesClases\src" />
+      <recent name="C:\Users\Marggio\Documents\Repositorios\ProgramacionDaw\ActividadesClases\src\actividadesClases" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
         <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
       </set>
     </attachedChunks>
   </component>
@@ -69,5 +74,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
