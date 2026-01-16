@@ -1,5 +1,4 @@
-package Clases.src.clases;
-
+package clases;
 public class CuentaCorriente {
     String numeroCuenta;
     double saldo;

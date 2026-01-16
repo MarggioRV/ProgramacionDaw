@@ -1,4 +1,5 @@
-package Clases.src.prueba;
+package prueba;
+// Clases.src.
 
 public class Matematicas {
     

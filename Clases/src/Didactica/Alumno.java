@@ -8,10 +8,9 @@ public class Alumno {
     public Alumno(){
     }
 
-
     public void setNOmbre(String nombre){
-
     }
+    
     public String getNombre(){
         return this.Nombre;
     }

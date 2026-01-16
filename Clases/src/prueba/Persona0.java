@@ -1,4 +1,4 @@
-package Clases.src.prueba;
+package prueba;
 
 public class Persona0 {
     protected String nombre;
